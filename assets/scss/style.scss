@@ -1,6 +1,2 @@
-@import 'normalize';
-
-@import 'presets/skins';
-@import 'presets/variables';
-
-@import 'common';
+@use "../../node_modules/normalize.css/normalize";
+@use 'common';
