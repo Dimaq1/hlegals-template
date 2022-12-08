@@ -3,4 +3,42 @@
 
 .actions {
   display: flex;
+  justify-content: flex-end;
+  gap: $gap;
+  align-items: center;
+
+  a {
+    color: $color-white;
+  }
+
+  &__languages {
+    display: flex;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    gap: 3px;
+
+    &-link {
+      border-radius: 8px;
+      padding: 5px 6px;
+
+      &.-active {
+        background: $color-accent;
+      }
+    }
+  }
+
+  &__locations {
+
+    &-link {
+      font-style: normal;
+    }
+  }
+
+  &__phones {
+
+    &-link {
+      font-weight: 700;
+    }
+  }
 }

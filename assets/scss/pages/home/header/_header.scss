@@ -25,9 +25,12 @@
     top: 0;
     right: 0;
     left: 0;
-    background-color: green;
     display: grid;
     grid-template-areas: "logo actions" "logo menu";
+    grid-template-columns: auto 1fr;
+    gap: $gap-sm $gap;
+    z-index: 2;
+    padding-top: 50px;
   }
 
   &__logo {

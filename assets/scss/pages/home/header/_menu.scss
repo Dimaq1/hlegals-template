@@ -2,8 +2,18 @@
 @use "../../../mixins" as *;
 
 .menu {
+
   &__list {
+    @include unlist;
     display: flex;
-    list-style: none;
+    justify-content: flex-end;
+    gap: $gap-md;
+  }
+
+  &__link {
+    font-size: 18px;
+    color: $color-white;
+    display: block;
+    padding: 0.25em 0;
   }
 }
