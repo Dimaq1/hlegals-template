@@ -1,0 +1,152 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.services {
+  position: relative;
+  background: linear-gradient($color-gradient-supersoft);
+  border-radius: 0 0 12px 12px;
+  padding-bottom: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: $gap-xl;
+    right: $gap-xl;
+    top: 100%;
+    background: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
+    height: $gap;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: $gap;
+    right: $gap;
+    top: 100%;
+    background: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+    height: $gap-sm;
+  }
+
+  &__page-link {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+    opacity: 0.5;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-image: url(../img/LinkArrow.svg);
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 12px;
+      background-position: 5px 1px;
+    }
+  }
+
+  &__title {
+    line-height: 1.19;
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    width: max-content;
+    max-width: 100%;
+
+    @include lg-min {
+      font-size: 42px;
+      margin-bottom: 68px;
+    }
+
+    @include lg-md {
+      font-size: 38px;
+      margin-bottom: 50px;
+    }
+
+    @include md {
+      font-size: 32px;
+      margin-bottom: $gap;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 58px 48px;
+
+    @include xl-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xl-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-item {
+
+    @include md-min {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include md {
+      display: grid;
+      align-items: center;
+      grid-template-areas: "icn ttl" "dsc dsc";
+      grid-template-columns: 64px 1fr;
+      gap: $gap-sm;
+    }
+
+    &__title {
+      grid-area: ttl;
+      line-height: 1.16;
+      color: $color-active-regular;
+      font-weight: 500;
+
+      @include md-min {
+        font-size: 24px;
+        margin-bottom: $gap-md;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
+    }
+
+    &__description {
+      grid-area: dsc;
+      font-family: 'TT Norms';
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-white;
+      font-weight: 400;
+    }
+
+    &__icon {
+      grid-area: icn;
+      order: -1;
+
+      @include md-min {
+        max-width: 92px;
+        max-height: 92px;
+        margin-bottom: $gap;
+      }
+
+      @include md {
+        max-width: 64px;
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}
