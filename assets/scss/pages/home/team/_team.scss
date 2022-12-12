@@ -1,0 +1,133 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+$size: 16px;
+
+.team {
+  margin-bottom: $gap-xl;
+
+  &__content {
+    background: $color-grey-bg;
+    border-radius: 12px;
+    margin-bottom: $gap;
+
+    @include md-min {
+      max-height: 500px;
+      display: flex;
+    }
+  }
+
+  &__picture {
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__item {
+
+    @include lg-min {
+      padding: 40px;
+    }
+
+    @include lg {
+      padding: 20px;
+    }
+  }
+
+  &__page-link {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+
+    &::after {
+      content: "";
+      @extend %link-arrow;
+      background-image: url(../img/LinkArrowRegular.svg);
+    }
+  }
+
+  &__quote {
+    font-weight: 700;
+    line-height: 1.19;
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    @include lg-min {
+      margin-bottom: $gap;
+      font-size: 42px;
+    }
+
+    @include lg-md {
+      margin-bottom: $gap;
+      font-size: 32px;
+    }
+
+
+    @include md {
+      margin-bottom: $gap-sm;
+      font-size: 32px;
+    }
+  }
+
+  &__caption {
+
+    @include md {
+      display: grid;
+      grid-template-areas: "pct atr" "pct txt";
+      grid-template-columns: 70px 1fr;
+      align-items: center;
+    }
+  }
+
+  &__picture-mobile {
+
+    @include md-min {
+      display: none;
+    }
+
+    @include md {
+      display: block;
+      grid-area: pct;
+    }
+  }
+
+  &__author {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $color-grey-text;
+
+    @include md-min {
+      margin-bottom: 5px;
+    }
+
+    @include md {
+      grid-area: atr;
+    }
+  }
+
+  &__note {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-grey-text;
+
+    @include md {
+      grid-area: txt;
+    }
+  }
+
+  &__indicators {
+    @extend %indicators;
+  }
+
+  &__indicator {
+    @extend %indicator;
+  }
+}

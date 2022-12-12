@@ -1,0 +1,26 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.cases-item {
+  background: $color-grey-bg;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+
+  &__description {
+    font-size: 24px;
+    line-height: 1.16;
+    color: $color-main-soft;
+    font-weight: 500;
+  }
+
+  &__inner {}
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.44;
+    color: $color-grey-text;
+  }
+}

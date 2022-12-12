@@ -142,9 +142,7 @@ $size: 16px;
   }
 
   &__indicators {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
+    @extend %indicators;
 
     @include md-min {
       display: none;
@@ -152,14 +150,6 @@ $size: 16px;
   }
 
   &__indicator {
-    width: $size;
-    height: $size;
-    background-color: $color-active-regular;
-    border-radius: $size * 0.5;
-    opacity: 0.2;
-
-    &.-active {
-      opacity: 1;
-    }
+    @extend %indicator;
   }
 }
