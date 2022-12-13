@@ -10,10 +10,17 @@
   gap: 20px;
 
   &__description {
-    font-size: 24px;
     line-height: 1.16;
     color: $color-main-soft;
     font-weight: 500;
+
+    @include md-min {
+      font-size: 24px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
   }
 
   &__inner {}
