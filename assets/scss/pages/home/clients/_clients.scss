@@ -1,0 +1,19 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.clents {
+
+  &__title {}
+
+  &__grid {}
+
+  &-item {
+    &:nth-of-type(1) {
+      background: #1C4280;
+    }
+
+    &__link {}
+
+    &__image {}
+  }
+}
