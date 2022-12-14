@@ -1,0 +1,89 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.publications {
+  background: $color-grey-bg;
+  padding: 40px 0 0;
+  position: relative;
+  max-height: 111vh;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    @include abs-position(77%);
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+  }
+
+  &__inner {
+    margin-bottom: 3px;
+  }
+
+  &__page-link {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      @extend %link-arrow;
+      background-image: url(../img/LinkArrowRegular.svg);
+    }
+  }
+
+  &__title {
+    line-height: 1.19;
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    width: max-content;
+    max-width: 100%;
+
+    @include md-min {
+      font-size: 42px;
+      margin-bottom: $gap-xl;
+    }
+
+
+    @include md {
+      font-size: 32px;
+      margin-bottom: $gap;
+    }
+  }
+
+  &__cards {
+    column-count: 3;
+    column-gap: $gap-xl;
+
+    @include ul-min {
+      // column-count: 3;
+      // column-gap: $gap-xl;
+    }
+
+    // @include ul {
+    //   column-count: 2;
+    //   column-gap: $gap-xl;
+    // }
+  }
+
+  &__button {
+    position: absolute;
+    min-width: 250px;
+    min-height: 50px;
+    background: $color-active-regular;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    bottom: $gap-xl;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

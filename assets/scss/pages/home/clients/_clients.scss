@@ -1,19 +1,187 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.clents {
+.clients {
 
-  &__title {}
+  &__title {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-main;
+    text-align: center;
+    margin-bottom: $gap-lg;
+  }
 
-  &__grid {}
+  &__grid {
+    display: grid;
 
-  &-item {
-    &:nth-of-type(1) {
-      background: #1C4280;
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px);
     }
 
-    &__link {}
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px);
+    }
 
-    &__image {}
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px);
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &:first-of-type {
+      background: #1C4280;
+
+      @include md {
+        order: -6;
+      }
+
+      @include xs {
+        padding: 0 $gap-md;
+      }
+    }
+
+    &:nth-of-type(2) {
+      background: #143646;
+
+      @include md {
+        order: -5;
+      }
+
+      @include xs {
+        padding: 0 $gap-sm;
+      }
+    }
+
+    &:nth-of-type(3) {
+      background: #F48B30;
+
+      @include md {
+        order: -4;
+      }
+
+      @include xs {
+        padding: 0 $gap-md;
+      }
+    }
+
+    &:nth-of-type(4) {
+      background: #9E4DC3;
+
+      @include md {
+        order: -3;
+      }
+
+      @include xs {
+        padding: 0 $gap;
+      }
+    }
+
+    &:nth-of-type(5) {
+      background: #FD9339;
+
+      @include xs {
+        padding: 0 $gap;
+      }
+    }
+
+    &:nth-of-type(6) {
+      background: #E2E2E4;
+
+      @include md {
+        order: 5;
+      }
+
+      @include xs {
+        padding: 0 $gap-lg;
+      }
+    }
+
+    &:nth-of-type(7) {
+      background: #C71C36;
+
+      @include md {
+        order: -1;
+      }
+
+      @include xs {
+        padding: 0 $gap-xl;
+      }
+    }
+
+    &:nth-of-type(8) {
+      background: #DCF3F9;
+
+      @include md {
+        order: -2;
+      }
+
+      @include xs {
+        padding: 0 $gap-xl;
+      }
+    }
+
+    &:nth-of-type(9) {
+      background: #EAEAEA;
+
+      @include md {
+        order: 1;
+      }
+
+      @include xs {
+        padding: 0 35px;
+      }
+    }
+
+    &:nth-of-type(10) {
+      background: #282240;
+
+      @include md {
+        order: 4;
+      }
+
+      @include xs {
+        padding: 0 $gap-lg;
+      }
+    }
+
+    &:nth-of-type(11) {
+      background: #1D4568;
+
+      @include md {
+        order: 3;
+      }
+
+      @include xs {
+        padding: 0 25px;
+      }
+    }
+
+    &:last-of-type {
+      background: $color-black;
+
+      @include md {
+        order: 2;
+      }
+
+      @include xs {
+        padding: 0 $gap-lg;
+      }
+    }
+
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
 }

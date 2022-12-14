@@ -1,0 +1,83 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.publications-item {
+  max-width: 414px;
+  border-radius: 8px;
+  background: $color-white;
+
+  &:nth-of-type(1) {
+    margin-bottom: $gap-xl;
+  }
+
+  &:nth-of-type(3) {
+    margin-bottom: $gap-xl;
+    width: 100%;
+    float: left;
+    break-inside: avoid;
+  }
+
+  &:nth-of-type(4) {
+    width: 100%;
+    float: left;
+    break-inside: avoid;
+  }
+
+  &:nth-of-type(5) {
+    margin-bottom: $gap-xl;
+    width: 100%;
+    float: left;
+    break-inside: avoid;
+  }
+
+  &:nth-of-type(6) {
+    width: 100%;
+    float: left;
+    break-inside: avoid;
+  }
+
+  &__picture {
+    max-width: 100%;
+    width: 414px;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__content {
+    max-width: 372px;
+    margin: 0 $gap;
+    padding: $gap 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $color-active-regular;
+    margin-bottom: $gap-sm;
+  }
+
+  &__date {
+    margin-bottom: 18px;
+    border-bottom: 4px solid $color-grey-separator;
+    padding-bottom: 18px;
+
+
+    &-day {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-grey-text;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-black;
+  }
+}
