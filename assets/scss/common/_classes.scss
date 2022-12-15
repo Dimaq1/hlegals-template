@@ -6,6 +6,10 @@
   margin-inline: auto;
 }
 
+.container--sm {
+  width: min(100% - $gap-xl, 1095px);
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

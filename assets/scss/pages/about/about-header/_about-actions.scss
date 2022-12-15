@@ -1,0 +1,68 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+.about-actions {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+
+  @include md-min {
+    justify-content: flex-end;
+
+    a {
+      color: $color-grey-text;
+    }
+  }
+
+  @include md {
+    justify-content: space-between;
+
+    a {
+      color: $color-grey-text;
+    }
+  }
+
+  &__languages {
+    display: flex;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    gap: 2px;
+
+    &-link {
+      border-radius: 8px;
+      padding: 5px 6px;
+
+      &.-active {
+        background: $color-accent;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__locations {
+
+    @include lg {
+      display: none;
+    }
+
+    &-link {
+      font-style: normal;
+    }
+  }
+
+  &__phones {
+
+    &-link {
+      font-weight: 700;
+    }
+  }
+
+  &__socials {
+
+    @include lg {
+      display: none;
+    }
+  }
+}

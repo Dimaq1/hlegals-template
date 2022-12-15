@@ -5,9 +5,21 @@
 
   &__locations {
     display: flex;
-    gap: $gap-xl;
     align-items: center;
     margin-bottom: $gap;
+
+    @include lg-min {
+      gap: $gap-xl;
+    }
+
+    @include lg-sm {
+      gap: $gap;
+    }
+
+    @include sm {
+      flex-direction: column;
+      gap: $gap-sm;
+    }
 
     &-address {
       font-style: normal;
@@ -31,6 +43,10 @@
     display: flex;
     gap: $gap;
     align-items: center;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &__phones {

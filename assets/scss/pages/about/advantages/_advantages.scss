@@ -1,0 +1,19 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.advantages {
+  padding: 80px 0 100px;
+
+  &__content {
+    display: flex;
+    gap: 62px;
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__introduction {}
+
+  &__achievement {}
+}
