@@ -6,39 +6,71 @@
   border-radius: 8px;
   background: $color-white;
 
-  &:nth-of-type(1) {
-    margin-bottom: $gap-xl;
+
+  @include md-sm {
+
+    &:nth-of-type(1) {
+      margin-bottom: $gap;
+    }
+
+    &:nth-of-type(4) {
+      margin-bottom: $gap;
+    }
   }
 
-  &:nth-of-type(3) {
-    margin-bottom: $gap-xl;
-    width: 100%;
-    float: left;
-    break-inside: avoid;
+  @include sm-min {
+    &:nth-of-type(1) {
+      margin-bottom: $gap-xl;
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: $gap-xl;
+      width: 100%;
+      float: left;
+      break-inside: avoid;
+    }
+
+    &:nth-of-type(4) {
+      width: 100%;
+      float: left;
+      break-inside: avoid;
+    }
+
+    &:nth-of-type(5) {
+      margin-bottom: $gap-xl;
+      width: 100%;
+      float: left;
+      break-inside: avoid;
+    }
+
+    &:nth-of-type(6) {
+      width: 100%;
+      float: left;
+      break-inside: avoid;
+    }
   }
 
-  &:nth-of-type(4) {
-    width: 100%;
-    float: left;
-    break-inside: avoid;
-  }
+  @include sm {
 
-  &:nth-of-type(5) {
-    margin-bottom: $gap-xl;
-    width: 100%;
-    float: left;
-    break-inside: avoid;
-  }
+    &:nth-of-type(2) {
+      order: 1;
+    }
 
-  &:nth-of-type(6) {
-    width: 100%;
-    float: left;
-    break-inside: avoid;
+    &:nth-of-type(4) {
+      display: none;
+    }
+
+    &:nth-of-type(5) {
+      display: none;
+    }
+
+    &:nth-of-type(6) {
+      display: none;
+    }
   }
 
   &__picture {
     max-width: 100%;
-    width: 414px;
   }
 
   &__image {
@@ -46,9 +78,16 @@
   }
 
   &__content {
-    max-width: 372px;
-    margin: 0 $gap;
-    padding: $gap 0;
+
+    @include sm-min {
+      max-width: 372px;
+      margin: 0 $gap;
+      padding: $gap 0;
+    }
+
+    @include sm {
+      padding: $gap;
+    }
   }
 
   &__title {
@@ -60,10 +99,12 @@
   }
 
   &__date {
-    margin-bottom: 18px;
-    border-bottom: 4px solid $color-grey-separator;
-    padding-bottom: 18px;
 
+    @include sm-min {
+      border-bottom: 4px solid $color-grey-separator;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+    }
 
     &-day {
       font-weight: 700;
@@ -79,5 +120,9 @@
     font-size: 16px;
     line-height: 1.38;
     color: $color-black;
+
+    @include sm {
+      display: none;
+    }
   }
 }

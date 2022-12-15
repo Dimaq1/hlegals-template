@@ -1,0 +1,29 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-footer {
+  padding: 32px 0 40px;
+  position: relative;
+  background: $color-grey-bg;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 4px;
+      width: 100%;
+      max-width: 1320px;
+      background-color: $color-grey-separator;
+    }
+  }
+
+  &__notes {
+    font-size: 16px;
+    line-height: 1.18;
+    color: $color-grey-text;
+  }
+}

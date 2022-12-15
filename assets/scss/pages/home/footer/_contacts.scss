@@ -1,0 +1,54 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.contacts {
+
+  &__locations {
+    display: flex;
+    gap: $gap-xl;
+    align-items: center;
+    margin-bottom: $gap;
+
+    &-address {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 1.18;
+      color: $color-main;
+      font-weight: 500;
+    }
+
+    &-map {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    gap: $gap;
+    align-items: center;
+  }
+
+  &__phones {
+
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.18;
+      color: $color-main-alt;
+    }
+  }
+
+  &__email {
+
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.18;
+    }
+  }
+}
