@@ -142,14 +142,9 @@ $size: 16px;
   }
 
   &__indicators {
-    @extend %indicators;
 
     @include md-min {
       display: none;
     }
-  }
-
-  &__indicator {
-    @extend %indicator;
   }
 }

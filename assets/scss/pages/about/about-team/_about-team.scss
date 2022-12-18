@@ -2,20 +2,74 @@
 @use "../../../mixins" as *;
 
 .about-team {
-  background-image: url(../img/PhotoTeam.png);
-  min-height: 438px;
-  display: flex;
-  align-items: center;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__picture {
+
+    @include md-min {
+      width: 100%;
+    }
+
+    @include md {
+      width: 953px;
+    }
+  }
+
+  &__image {
+
+    @include md-min {
+      width: 100%;
+    }
+
+    @include md {
+      width: 953px;
+    }
+  }
 
   &__title {
-    font-size: 96px;
-    line-height: 1.17;
-    letter-spacing: 63px;
+    position: absolute;
     text-transform: uppercase;
     color: $color-white;
     opacity: 0.8;
     text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.17;
+    user-select: none;
+    max-width: 905px;
+
+    @include xl-min {
+      font-size: 96px;
+      letter-spacing: 63px;
+    }
+
+    @include xl-lg {
+      font-size: 84px;
+      letter-spacing: 51px;
+      margin-right: -51px;
+    }
+
+    @include lg-md {
+      font-size: 70px;
+      letter-spacing: 37px;
+      margin-right: -37px;
+    }
+
+    @include md-sm {
+      font-size: 50px;
+      letter-spacing: 30px;
+      margin-right: -30px;
+    }
+
+    @include sm {
+      font-size: 36px;
+      letter-spacing: 20px;
+      margin-right: -20px;
+    }
   }
 }

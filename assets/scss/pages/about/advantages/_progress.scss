@@ -1,22 +1,24 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.achievement {
+.progress {
   display: flex;
-  gap: $gap-xl;
   position: relative;
 
   @include lg-min {
     flex-direction: column;
     max-width: 391px;
+    gap: $gap-xl;
   }
 
   @include lg-md {
     justify-content: space-evenly;
+    gap: $gap;
   }
 
   @include md {
     flex-direction: column;
+    gap: $gap;
   }
 
   &::before {
@@ -41,9 +43,10 @@
   &__item {
     display: grid;
     grid-template-areas: "icon title" "text text";
-    gap: 10px;
+    gap: $gap-sm;
     grid-template-columns: 23px 1fr;
     align-items: center;
+    max-width: 393px;
 
     @include lg-md {
       max-width: 200px;
@@ -59,16 +62,8 @@
     background-clip: text;
     text-fill-color: transparent;
     width: max-content;
-    max-width: 100%;
+    max-width: 355px;
     grid-area: title;
-
-    // @include lg-min {
-    //   font-size: 36px;
-    // }
-
-    // @include lg {
-    //   font-size: 30px;
-    // }
   }
 
   &__text {
@@ -82,6 +77,4 @@
     grid-area: icon;
     padding-top: 3px;
   }
-
-  &__icon-image {}
 }

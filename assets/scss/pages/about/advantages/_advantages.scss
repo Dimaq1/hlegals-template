@@ -2,18 +2,25 @@
 @use "../../../mixins" as *;
 
 .advantages {
-  padding: 80px 0 100px;
+
+  @include md-min {
+    padding: 80px 0 100px;
+  }
+
+  @include md {
+    padding: $gap 0 34px;
+  }
 
   &__content {
     display: flex;
-    gap: 62px;
+
+    @include lg-min {
+      gap: 62px;
+    }
 
     @include lg {
       flex-direction: column;
+      gap: 35px;
     }
   }
-
-  &__introduction {}
-
-  &__achievement {}
 }

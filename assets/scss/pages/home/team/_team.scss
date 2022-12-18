@@ -122,12 +122,4 @@ $size: 16px;
       grid-area: txt;
     }
   }
-
-  &__indicators {
-    @extend %indicators;
-  }
-
-  &__indicator {
-    @extend %indicator;
-  }
 }

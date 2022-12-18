@@ -1,0 +1,79 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.achievement-slider {
+
+
+  &__items {
+    display: flex;
+    margin-bottom: $gap-lg;
+
+    @include lg-min {
+      gap: $gap-xl;
+    }
+
+    @include lg-md {
+      gap: $gap;
+    }
+
+    @include md {
+      gap: $gap;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    background: $color-white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+
+    @include md-min {
+      padding: 0 $gap-md;
+    }
+
+    @include md {
+
+      &.-invisible {
+        display: none;
+      }
+    }
+
+    @include xs-min {
+      height: 109px;
+    }
+
+    @include xs {
+      height: 57px;
+    }
+  }
+
+  &__item-link {
+    display: block;
+
+    @include xs-xx {
+      height: 40px;
+    }
+
+    @include xx {
+      height: 31px;
+    }
+  }
+
+  &__item-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__indicator {
+
+    @include md-min {
+
+      &.-invisible {
+        display: none;
+      }
+    }
+  }
+}

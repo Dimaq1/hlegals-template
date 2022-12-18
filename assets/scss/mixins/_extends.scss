@@ -15,22 +15,3 @@
   height: 12px;
   background-position: 5px 1px;
 }
-
-%indicators {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-}
-
-%indicator {
-  $size: 16px;
-  width: $size;
-  height: $size;
-  background-color: $color-active-regular;
-  border-radius: $size * 0.5;
-  opacity: 0.2;
-
-  &.-active {
-    opacity: 1;
-  }
-}
