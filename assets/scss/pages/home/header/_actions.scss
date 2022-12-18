@@ -3,9 +3,9 @@
 
 .actions {
   display: flex;
-  gap: $gap;
   align-items: center;
 
+  gap: $gap;
   @include sm-min {
     justify-content: flex-end;
 
@@ -13,7 +13,6 @@
       color: $color-white;
     }
   }
-
   @include sm {
     justify-content: space-between;
 
@@ -24,18 +23,22 @@
 
   &__languages {
     display: flex;
-    font-weight: 700;
-    font-size: 12px;
+
     letter-spacing: 1px;
+
+    font-size: 12px;
+    font-weight: 700;
+
     gap: 2px;
 
     &-link {
-      border-radius: 8px;
       padding: 5px 6px;
 
+      border-radius: 8px;
+
       &.-active {
-        background: $color-accent;
         color: $color-white;
+        background: $color-accent;
       }
     }
   }
@@ -51,7 +54,6 @@
   }
 
   &__phones {
-
     &-link {
       font-weight: 700;
     }

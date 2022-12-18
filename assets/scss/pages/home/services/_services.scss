@@ -3,9 +3,11 @@
 
 .services {
   position: relative;
-  background: linear-gradient($color-gradient-supersoft);
-  border-radius: 0 0 12px 12px;
+
   padding-bottom: 80px;
+
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient($color-gradient-supersoft);
 
   @include md-min {
     margin-bottom: 60px;
@@ -16,69 +18,85 @@
   }
 
   &::before {
-    content: "";
     position: absolute;
-    left: $gap-xl;
-    right: $gap-xl;
     top: 100%;
-    background: #E7E7F2;
-    border-radius: 0px 0px 12px 12px;
+    right: $gap-xl;
+    left: $gap-xl;
+
     height: $gap;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: #e7e7f2;
   }
 
   &::after {
-    content: "";
     position: absolute;
-    left: $gap;
-    right: $gap;
     top: 100%;
-    background: #CACADB;
-    border-radius: 0px 0px 12px 12px;
+    right: $gap;
+    left: $gap;
+
     height: $gap-sm;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: #cacadb;
   }
 
   &__page-link {
-    font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: $color-white;
+
     opacity: 0.5;
+    color: $color-white;
+
+    font-size: 14px;
 
     &::after {
       content: "";
-      @extend %link-arrow;
+
       background-image: url(../img/LinkArrow.svg);
+
+      @extend %link-arrow;
     }
   }
 
   &__title {
-    line-height: 1.19;
-    background: linear-gradient($color-gradient-redtext);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     width: max-content;
     max-width: 100%;
 
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    line-height: 1.19;
+
     @include lg-min {
-      font-size: 42px;
       margin-bottom: 68px;
+
+      font-size: 42px;
     }
 
     @include lg-md {
-      font-size: 38px;
       margin-bottom: 50px;
+
+      font-size: 38px;
     }
 
     @include md {
-      font-size: 32px;
       margin-bottom: $gap;
+
+      font-size: 32px;
     }
+
+    -webkit-text-fill-color: transparent;
   }
 
   &__grid {
     display: grid;
+
     gap: 58px 48px;
 
     @include xl-min {
@@ -95,7 +113,6 @@
   }
 
   &-item {
-
     @include md-min {
       display: flex;
       flex-direction: column;
@@ -104,20 +121,24 @@
     @include md {
       display: grid;
       align-items: center;
+
+      gap: $gap-sm;
       grid-template-areas: "icn ttl" "dsc dsc";
       grid-template-columns: 64px 1fr;
-      gap: $gap-sm;
     }
 
     &__title {
-      grid-area: ttl;
-      line-height: 1.16;
       color: $color-active-regular;
+
       font-weight: 500;
+      line-height: 1.16;
+
+      grid-area: ttl;
 
       @include md-min {
-        font-size: 24px;
         margin-bottom: $gap-md;
+
+        font-size: 24px;
       }
 
       @include md {
@@ -126,17 +147,20 @@
     }
 
     &__description {
-      grid-area: dsc;
-      font-family: 'TT Norms';
-      font-size: 18px;
-      line-height: 1.44;
       color: $color-white;
+
+      font-family: "TT Norms";
+      font-size: 18px;
       font-weight: 400;
+      line-height: 1.44;
+
+      grid-area: dsc;
     }
 
     &__icon {
-      grid-area: icn;
       order: -1;
+
+      grid-area: icn;
 
       @include md-min {
         max-width: 92px;

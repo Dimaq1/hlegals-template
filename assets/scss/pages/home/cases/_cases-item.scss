@@ -2,32 +2,36 @@
 @use "../../../mixins" as *;
 
 .cases-item {
-  background: $color-grey-bg;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  padding: 20px;
+
+  background: $color-grey-bg;
+
   gap: 20px;
 
   &__description {
-    line-height: 1.16;
     color: $color-main-soft;
+
     font-weight: 500;
+    line-height: 1.16;
 
     @include md-min {
       font-size: 24px;
     }
-
     @include md {
       font-size: 18px;
     }
   }
 
-  &__inner {}
+
 
   &__link {
+    color: $color-grey-text;
+
     font-size: 18px;
     line-height: 1.44;
-    color: $color-grey-text;
   }
 }

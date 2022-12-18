@@ -7,6 +7,7 @@
 
   &__grid {
     display: grid;
+
     gap: 2px;
 
     @include lg-min {
@@ -24,24 +25,30 @@
   }
 
   &__title {
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $color-accent;
-    background: $color-grey-bg;
     padding: 20px;
 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-accent;
+    background: $color-grey-bg;
+
+    font-size: 14px;
+    line-height: 1.21;
+
     @include lg-min {
+      border-radius: 12px 0 0 0;
+
       grid-column: 1 / 3;
       grid-row: 1;
-      border-radius: 12px 0 0 0;
     }
 
     @include lg-md {
-      border-radius: 12px 12px 0 0;
-      grid-column: 1 / 3;
       text-align: center;
+
+      border-radius: 12px 12px 0 0;
+
+      grid-column: 1 / 3;
     }
 
     @include md {
@@ -53,50 +60,47 @@
     padding-right: 5px;
 
     @include lg-min {
-      grid-row: 2;
       grid-column: 1 / 3;
+      grid-row: 2;
     }
   }
 
   &__wrapper-two {
-
     @include lg-min {
-      grid-row: 1 / 3;
       grid-column: 3 / 5;
+      grid-row: 1 / 3;
     }
   }
 
   &__wrapper-three {
-
     @include lg-min {
-      grid-row: 1 / 3;
       border-radius: 0 12px 0 0;
+
+      grid-row: 1 / 3;
     }
   }
 
   &__wrapper-four {
-
     @include lg-min {
       border-radius: 0 0 0 12px;
     }
   }
 
   &__wrapper-five {
-
     @include lg-min {
       grid-column: 2 / 4;
     }
 
     @include lg-md {
-      border-radius: 0 0 0 12;
+      border-radius: 0 0 0 12px;
     }
   }
 
   &__wrapper-six {
-
     @include lg-min {
-      grid-column: 4 / 6;
       border-radius: 0 0 12px 0;
+
+      grid-column: 4 / 6;
     }
 
     @include lg-md {

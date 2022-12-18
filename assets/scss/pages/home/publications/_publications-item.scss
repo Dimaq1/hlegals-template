@@ -3,12 +3,11 @@
 
 .publications-item {
   max-width: 414px;
+
   border-radius: 8px;
   background: $color-white;
 
-
   @include md-sm {
-
     &:nth-of-type(1) {
       margin-bottom: $gap;
     }
@@ -17,41 +16,46 @@
       margin-bottom: $gap;
     }
   }
-
   @include sm-min {
     &:nth-of-type(1) {
       margin-bottom: $gap-xl;
     }
 
     &:nth-of-type(3) {
-      margin-bottom: $gap-xl;
-      width: 100%;
       float: left;
+
+      width: 100%;
+      margin-bottom: $gap-xl;
+
       break-inside: avoid;
     }
 
     &:nth-of-type(4) {
-      width: 100%;
       float: left;
+
+      width: 100%;
+
       break-inside: avoid;
     }
 
     &:nth-of-type(5) {
-      margin-bottom: $gap-xl;
-      width: 100%;
       float: left;
+
+      width: 100%;
+      margin-bottom: $gap-xl;
+
       break-inside: avoid;
     }
 
     &:nth-of-type(6) {
-      width: 100%;
       float: left;
+
+      width: 100%;
+
       break-inside: avoid;
     }
   }
-
   @include sm {
-
     &:nth-of-type(2) {
       order: 1;
     }
@@ -78,48 +82,51 @@
   }
 
   &__content {
-
     @include sm-min {
       max-width: 372px;
       margin: 0 $gap;
       padding: $gap 0;
     }
-
     @include sm {
       padding: $gap;
     }
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.16;
-    color: $color-active-regular;
     margin-bottom: $gap-sm;
+
+    color: $color-active-regular;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.16;
   }
 
   &__date {
-
     @include sm-min {
-      border-bottom: 4px solid $color-grey-separator;
       margin-bottom: 18px;
       padding-bottom: 18px;
+
+      border-bottom: 4px solid $color-grey-separator;
     }
 
     &-day {
-      font-weight: 700;
-      font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       color: $color-grey-text;
+
+      font-size: 12px;
+      font-weight: 700;
     }
   }
 
   &__description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.38;
     color: $color-black;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
 
     @include sm {
       display: none;

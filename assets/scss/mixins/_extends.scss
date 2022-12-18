@@ -1,17 +1,19 @@
 @use "../presets" as *;
 
 %text-linear-gradient {
-  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  background: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+
+  -webkit-text-fill-color: transparent;
 }
 
 %link-arrow {
   display: inline-block;
-  background-repeat: no-repeat;
+
   width: 12px;
   height: 12px;
+
+  background-repeat: no-repeat;
   background-position: 5px 1px;
 }

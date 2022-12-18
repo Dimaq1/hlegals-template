@@ -2,15 +2,17 @@
 @use "../../../mixins" as *;
 
 .clients {
-
   &__title {
-    font-size: 14px;
-    line-height: 1.21;
+    margin-bottom: $gap-lg;
+
+    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-main;
-    text-align: center;
-    margin-bottom: $gap-lg;
+
+    font-size: 14px;
+    line-height: 1.21;
   }
 
   &__grid {
@@ -20,12 +22,10 @@
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px);
     }
-
     @include lg-md {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px) minmax(auto, 120px);
     }
-
     @include md {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px) minmax(auto, 90px);
@@ -39,12 +39,11 @@
 
 
     &:first-of-type {
-      background: #1C4280;
+      background: #1c4280;
 
       @include md {
         order: -6;
       }
-
       @include xs {
         padding: 0 $gap-md;
       }
@@ -56,38 +55,35 @@
       @include md {
         order: -5;
       }
-
       @include xs {
         padding: 0 $gap-sm;
       }
     }
 
     &:nth-of-type(3) {
-      background: #F48B30;
+      background: #f48b30;
 
       @include md {
         order: -4;
       }
-
       @include xs {
         padding: 0 $gap-md;
       }
     }
 
     &:nth-of-type(4) {
-      background: #9E4DC3;
+      background: #9e4dc3;
 
       @include md {
         order: -3;
       }
-
       @include xs {
         padding: 0 $gap;
       }
     }
 
     &:nth-of-type(5) {
-      background: #FD9339;
+      background: #fd9339;
 
       @include xs {
         padding: 0 $gap;
@@ -95,48 +91,44 @@
     }
 
     &:nth-of-type(6) {
-      background: #E2E2E4;
+      background: #e2e2e4;
 
       @include md {
         order: 5;
       }
-
       @include xs {
         padding: 0 $gap-lg;
       }
     }
 
     &:nth-of-type(7) {
-      background: #C71C36;
+      background: #c71c36;
 
       @include md {
         order: -1;
       }
-
       @include xs {
         padding: 0 $gap-xl;
       }
     }
 
     &:nth-of-type(8) {
-      background: #DCF3F9;
+      background: #dcf3f9;
 
       @include md {
         order: -2;
       }
-
       @include xs {
         padding: 0 $gap-xl;
       }
     }
 
     &:nth-of-type(9) {
-      background: #EAEAEA;
+      background: #eaeaea;
 
       @include md {
         order: 1;
       }
-
       @include xs {
         padding: 0 35px;
       }
@@ -148,19 +140,17 @@
       @include md {
         order: 4;
       }
-
       @include xs {
         padding: 0 $gap-lg;
       }
     }
 
     &:nth-of-type(11) {
-      background: #1D4568;
+      background: #1d4568;
 
       @include md {
         order: 3;
       }
-
       @include xs {
         padding: 0 25px;
       }
@@ -172,16 +162,16 @@
       @include md {
         order: 2;
       }
-
       @include xs {
         padding: 0 $gap-lg;
       }
     }
 
     &__image {
-      object-fit: cover;
       width: 100%;
       height: 100%;
+
+      object-fit: cover;
     }
   }
 }

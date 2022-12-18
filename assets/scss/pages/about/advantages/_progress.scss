@@ -2,51 +2,62 @@
 @use "../../../mixins" as *;
 
 .progress {
-  display: flex;
   position: relative;
+
+  display: flex;
 
   @include lg-min {
     flex-direction: column;
+
     max-width: 391px;
+
     gap: $gap-xl;
   }
 
   @include lg-md {
     justify-content: space-evenly;
+
     gap: $gap;
   }
 
   @include md {
     flex-direction: column;
+
     gap: $gap;
   }
 
   &::before {
-    content: "";
     position: absolute;
+
+    content: "";
+
     background-color: $color-grey-separator;
 
     @include lg-min {
-      height: 310px;
-      left: -24px;
       top: 7px;
+      left: -24px;
+
       width: 4px;
+      height: 310px;
     }
 
     @include lg {
+      top: -20px;
+
       width: 100%;
       height: 4px;
-      top: -20px;
     }
   }
 
   &__item {
     display: grid;
-    grid-template-areas: "icon title" "text text";
-    gap: $gap-sm;
-    grid-template-columns: 23px 1fr;
     align-items: center;
+
     max-width: 393px;
+
+    gap: $gap-sm;
+    grid-template-areas: "icon title" "text text";
+    grid-template-columns: 23px 1fr;
 
     @include lg-md {
       max-width: 200px;
@@ -54,27 +65,32 @@
   }
 
   &__title {
-    line-height: 1.16;
-    font-size: 36px;
-    background: linear-gradient($color-gradient-redtext);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     width: max-content;
     max-width: 355px;
+
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    font-size: 36px;
+    line-height: 1.16;
+
     grid-area: title;
+    -webkit-text-fill-color: transparent;
   }
 
   &__text {
+    color: $color-main;
+
     font-size: 18px;
     line-height: 1.16;
-    color: $color-main;
+
     grid-area: text;
   }
 
   &__icon {
-    grid-area: icon;
     padding-top: 3px;
+
+    grid-area: icon;
   }
 }

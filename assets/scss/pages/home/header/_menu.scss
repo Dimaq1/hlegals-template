@@ -2,46 +2,51 @@
 @use "../../../mixins" as *;
 
 .menu {
-
   &__btn {
+    position: relative;
+
     width: 18px;
     height: 22.5px;
-    position: relative;
     margin-left: auto;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+
     cursor: pointer;
+    -webkit-transition: 0.5s ease-in-out;
+       -moz-transition: 0.5s ease-in-out;
+         -o-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
 
     @include md-min {
-      display: none
+      display: none;
     }
 
     &-row {
-      display: block;
       position: absolute;
-      height: 2px;
-      width: 100%;
-      background: $color-white;
-      border-radius: 3px;
-      opacity: 1;
       left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 2px;
+
+      -webkit-transition: 0.25s ease-in-out;
+         -moz-transition: 0.25s ease-in-out;
+           -o-transition: 0.25s ease-in-out;
+              transition: 0.25s ease-in-out;
       -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .25s ease-in-out;
-      -moz-transition: .25s ease-in-out;
-      -o-transition: .25s ease-in-out;
-      transition: .25s ease-in-out;
+         -moz-transform: rotate(0deg);
+           -o-transform: rotate(0deg);
+              transform: rotate(0deg);
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-white;
 
       &:nth-child(1) {
-        top: 0px;
+        top: 0;
       }
 
       &:nth-child(2) {
@@ -60,56 +65,61 @@
     &.-active span {
       &:nth-child(1) {
         top: 9px;
-        width: 0%;
         left: 50%;
+
+        width: 0;
       }
 
       &:nth-child(2) {
         -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
+           -moz-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+                transform: rotate(45deg);
       }
 
       &:nth-child(3) {
         -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+           -moz-transform: rotate(-45deg);
+             -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
       }
 
       &:nth-child(4) {
         top: 9px;
-        width: 0%;
         left: 50%;
+
+        width: 0;
       }
     }
   }
 
   &__list {
-
-    @include unlist;
-
     display: flex;
     justify-content: flex-end;
+
     gap: $gap-md;
-
+    @include unlist;
     @include md {
-      display: none;
-
       position: absolute;
       right: 0;
-      background: $color-main;
-      border-radius: 5px;
+
+      display: none;
+
       padding: $gap-lg;
+
+      border-radius: 5px;
+      background: $color-main;
       box-shadow: 10px 10px 20px $color-black;
     }
   }
 
   &__link {
-    font-size: 18px;
-    color: $color-white;
     display: block;
+
     padding: 0.25em 0;
+
+    color: $color-white;
+
+    font-size: 18px;
   }
 }

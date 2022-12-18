@@ -2,22 +2,23 @@
 @use "../../../mixins" as *;
 
 .about-header {
-
   &__grid {
     display: grid;
-    grid-template-columns: auto 1fr;
 
+    grid-template-columns: auto 1fr;
     @include md-min {
       padding-top: 50px;
-      grid-template-areas: "logo actions" "logo menu";
-      gap: $gap-sm $gap;
-    }
 
+      gap: $gap-sm $gap;
+      grid-template-areas: "logo actions" "logo menu";
+    }
     @include md {
-      padding-top: $gap;
-      grid-template-areas: "actions actions" "logo menu";
-      gap: $gap;
       align-items: center;
+
+      padding-top: $gap;
+
+      gap: $gap;
+      grid-template-areas: "actions actions" "logo menu";
     }
   }
 

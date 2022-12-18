@@ -2,17 +2,21 @@
 @use "../../../mixins" as *;
 
 .achievement {
-  background: $color-grey-bg;
-  border-radius: 12px 12px 0px 0px;
   padding: 28px 0 30px;
 
+  border-radius: 12px 12px 0 0;
+  background: $color-grey-bg;
+
   &__title {
-    font-size: 14px;
-    line-height: 1.21;
+    margin-bottom: $gap-lg;
+
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-main;
-    margin-bottom: $gap-lg;
+
+    font-size: 14px;
+    line-height: 1.21;
   }
 }

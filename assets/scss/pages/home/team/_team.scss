@@ -1,31 +1,30 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
-
 $size: 16px;
 
 .team {
   margin-bottom: $gap-xl;
 
   &__content {
-    background: $color-grey-bg;
-    border-radius: 12px;
     margin-bottom: $gap;
 
+    border-radius: 12px;
+    background: $color-grey-bg;
+
     @include md-min {
-      max-height: 500px;
       display: flex;
+
+      max-height: 500px;
     }
   }
 
   &__picture {
-
     @include md {
       display: none;
     }
   }
 
   &__item {
-
     @include lg-min {
       padding: 40px;
     }
@@ -36,72 +35,80 @@ $size: 16px;
   }
 
   &__page-link {
-    font-weight: 700;
-    font-size: 14px;
+    margin-bottom: 3px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 3px;
+
+    font-size: 14px;
+    font-weight: 700;
 
     &::after {
       content: "";
-      @extend %link-arrow;
+
       background-image: url(../img/LinkArrowRegular.svg);
+
+      @extend %link-arrow;
     }
   }
 
   &__quote {
-    font-weight: 700;
-    line-height: 1.19;
     background: linear-gradient($color-gradient-redtext);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+
+    font-weight: 700;
+    line-height: 1.19;
 
     @include lg-min {
       margin-bottom: $gap;
+
       font-size: 42px;
     }
 
     @include lg-md {
       margin-bottom: $gap;
+
       font-size: 32px;
     }
-
 
     @include md {
       margin-bottom: $gap-sm;
+
       font-size: 32px;
     }
+
+    -webkit-text-fill-color: transparent;
   }
 
   &__caption {
-
     @include md {
       display: grid;
+      align-items: center;
+
       grid-template-areas: "pct atr" "pct txt";
       grid-template-columns: 70px 1fr;
-      align-items: center;
     }
   }
 
   &__picture-mobile {
-
     @include md-min {
       display: none;
     }
 
     @include md {
       display: block;
+
       grid-area: pct;
     }
   }
 
   &__author {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.16;
     color: $color-grey-text;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.16;
 
     @include md-min {
       margin-bottom: 5px;
@@ -113,10 +120,11 @@ $size: 16px;
   }
 
   &__note {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.38;
     color: $color-grey-text;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
 
     @include md {
       grid-area: txt;
