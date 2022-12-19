@@ -3,7 +3,6 @@
 
 
 .about-actions {
-
   @include md-min {
     justify-content: flex-end;
 
@@ -11,7 +10,6 @@
       color: $color-grey-text;
     }
   }
-
   @include md {
     justify-content: space-between;
 

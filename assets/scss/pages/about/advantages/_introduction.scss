@@ -8,7 +8,6 @@
   max-width: 641px;
 
   gap: $gap;
-
   @include lg-md {
     margin-right: auto;
     margin-left: auto;
@@ -21,19 +20,17 @@
 
     background: linear-gradient($color-gradient-redtext);
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
 
     line-height: 1.19;
-
-    -webkit-text-fill-color: transparent;
 
     @include md-min {
       font-size: 42px;
     }
-
     @include md {
       font-size: 32px;
     }
+    -webkit-text-fill-color: transparent;
   }
 
   &__text {
@@ -44,7 +41,6 @@
     @include md-min {
       font-size: 21px;
     }
-
     @include md {
       font-size: 18px;
     }

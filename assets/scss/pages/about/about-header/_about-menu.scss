@@ -2,7 +2,6 @@
 @use "../../../mixins" as *;
 
 .about-menu {
-
   &__btn {
     &-row {
       background: $color-main;
@@ -19,5 +18,4 @@
       border-bottom: 2px solid $color-accent;
     }
   }
-
 }

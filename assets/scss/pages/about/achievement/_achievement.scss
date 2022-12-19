@@ -2,17 +2,15 @@
 @use "../../../mixins" as *;
 
 .achievement {
+  border-radius: 12px 12px 0 0;
+  background: $color-grey-bg;
 
   @include md-min {
     padding: 28px 0 30px;
   }
-
   @include md {
     padding: 28px 0 9px;
   }
-
-  border-radius: 12px 12px 0 0;
-  background: $color-grey-bg;
 
   &__title {
     margin-bottom: $gap-lg;

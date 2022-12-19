@@ -8,7 +8,6 @@ $size: 16px;
   @include md-min {
     gap: $gap-xl * 2;
   }
-
   @include md {
     flex-direction: column;
 
@@ -24,7 +23,6 @@ $size: 16px;
     flex-grow: 2;
 
     gap: $gap;
-
     @include md-min {
       align-items: flex-end;
 
@@ -40,7 +38,6 @@ $size: 16px;
         background-color: $color-grey-separator;
       }
     }
-
     @include md {
       align-items: flex-start;
     }
@@ -59,14 +56,12 @@ $size: 16px;
       font-size: 42px;
       line-height: 1.19;
     }
-
     @include lg-md {
       text-align: right;
 
       font-size: 32px;
       line-height: 1.19;
     }
-
     @include md {
       display: none;
 
@@ -82,7 +77,6 @@ $size: 16px;
       display: block;
 
       @extend %text-linear-gradient;
-
       @include md-min {
         &::after {
           position: absolute;
@@ -135,13 +129,11 @@ $size: 16px;
 
       font-size: 32px;
     }
-
     @include lg-md {
       margin-bottom: $gap;
 
       font-size: 28px;
     }
-
     @include md {
       margin-bottom: $gap-md;
 
@@ -155,13 +147,11 @@ $size: 16px;
     @include lg-min {
       font-size: 21px;
     }
-
     @include lg-xs {
       margin-bottom: $gap-sm;
 
       font-size: 18px;
     }
-
     @include xs {
       margin-bottom: $gap-sm;
 
