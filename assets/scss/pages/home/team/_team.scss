@@ -3,10 +3,16 @@
 $size: 16px;
 
 .team {
-  margin-bottom: $gap-xl;
+
+  @include md-min {
+    margin-bottom: $gap-xl;
+  }
+
+  @include md {
+    margin-bottom: $gap-lg;
+  }
 
   &__content {
-    margin-bottom: $gap;
 
     border-radius: 12px;
     background: $color-grey-bg;
@@ -15,6 +21,11 @@ $size: 16px;
       display: flex;
 
       max-height: 500px;
+      margin-bottom: $gap;
+    }
+
+    @include md {
+      margin-bottom: $gap-md;
     }
   }
 

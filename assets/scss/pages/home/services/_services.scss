@@ -4,17 +4,17 @@
 .services {
   position: relative;
 
-  padding-bottom: 80px;
-
   border-radius: 0 0 12px 12px;
   background: linear-gradient($color-gradient-supersoft);
 
   @include md-min {
     margin-bottom: 60px;
+    padding-bottom: 80px;
   }
 
   @include md {
     margin-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   &::before {
@@ -107,8 +107,13 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @include md-min {
+      gap: 58px 48px;
+    }
+
     @include md {
       grid-template-columns: 1fr;
+      gap: 40px 48px;
     }
   }
 

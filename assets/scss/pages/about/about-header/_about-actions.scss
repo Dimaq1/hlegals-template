@@ -3,10 +3,7 @@
 
 
 .about-actions {
-  display: flex;
-  align-items: center;
 
-  gap: $gap;
   @include md-min {
     justify-content: flex-end;
 
@@ -14,33 +11,12 @@
       color: $color-grey-text;
     }
   }
+
   @include md {
     justify-content: space-between;
 
     a {
       color: $color-grey-text;
-    }
-  }
-
-  &__languages {
-    display: flex;
-
-    letter-spacing: 1px;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    gap: 2px;
-
-    &-link {
-      padding: 5px 6px;
-
-      border-radius: 8px;
-
-      &.-active {
-        color: $color-white;
-        background: $color-accent;
-      }
     }
   }
 
@@ -51,18 +27,6 @@
 
     &-link {
       font-style: normal;
-    }
-  }
-
-  &__phones {
-    &-link {
-      font-weight: 700;
-    }
-  }
-
-  &__socials {
-    @include lg {
-      display: none;
     }
   }
 }

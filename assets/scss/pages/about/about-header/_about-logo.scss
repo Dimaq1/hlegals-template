@@ -21,12 +21,11 @@
     @include lg-sm {
       max-height: 40px;
     }
+
     @include sm {
       max-height: 24px;
     }
   }
-
-
 
   &__text {
     color: $color-main;
@@ -37,9 +36,11 @@
     @include lg-min {
       font-size: 38px;
     }
+
     @include lg-sm {
       font-size: 28px;
     }
+
     @include sm {
       font-size: 19px;
     }

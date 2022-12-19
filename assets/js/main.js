@@ -31,6 +31,6 @@ setInterval(() => {
 }, interval);
 
 // вычисление и изменение высоты блока описания под максимальный текст
-descriptionsList.forEach(el => heightsArr.push(el.clientHeight));
-heightMax = Math.max(...heightsArr);
-descriptionsList.forEach(el => el.style.height = `${heightMax}px`);
+// descriptionsList.forEach(el => heightsArr.push(el.clientHeight));
+// heightMax = Math.max(...heightsArr);
+// descriptionsList.forEach(el => el.style.height = `${heightMax}px`);

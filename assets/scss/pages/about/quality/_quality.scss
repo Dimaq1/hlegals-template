@@ -2,8 +2,12 @@
 @use "../../../mixins" as *;
 
 .quality {
-  @include md-min {
+  @include lg-min {
     padding: 80px 0 93px;
+  }
+
+  @include lg-md {
+    padding: 50px 0 50px;
   }
 
   @include md {

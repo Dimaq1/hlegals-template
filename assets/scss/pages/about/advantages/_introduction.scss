@@ -23,16 +23,30 @@
     -webkit-background-clip: text;
     background-clip: text;
 
-    font-size: 42px;
     line-height: 1.19;
 
     -webkit-text-fill-color: transparent;
+
+    @include md-min {
+      font-size: 42px;
+    }
+
+    @include md {
+      font-size: 32px;
+    }
   }
 
   &__text {
     color: $color-black;
 
-    font-size: 21px;
     line-height: 1.43;
+
+    @include md-min {
+      font-size: 21px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
   }
 }

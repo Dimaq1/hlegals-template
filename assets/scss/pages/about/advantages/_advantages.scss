@@ -2,11 +2,17 @@
 @use "../../../mixins" as *;
 
 .advantages {
-  @include md-min {
+
+  @include lg-min {
     padding: 80px 0 100px;
   }
+
+  @include lg-md {
+    padding: 50px 0 50px;
+  }
+
   @include md {
-    padding: $gap 0 34px;
+    padding: 27px 0 34px;
   }
 
   &__content {
@@ -15,6 +21,7 @@
     @include lg-min {
       gap: 62px;
     }
+
     @include lg {
       flex-direction: column;
 
