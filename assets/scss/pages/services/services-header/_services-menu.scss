@@ -1,2 +1,22 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+
+.services-menu {
+
+  &__list {
+
+    @include lg {
+      gap: 14px;
+    }
+  }
+
+  &__link {
+
+    &.-active {
+      padding: 0.25em 0 0;
+
+      color: $color-white;
+      border-bottom: 2px solid $color-white;
+    }
+  }
+}

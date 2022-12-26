@@ -1,2 +1,38 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+
+.services-actions {
+
+  @include md-min {
+    justify-content: flex-end;
+
+    a {
+      color: $color-white;
+    }
+  }
+
+  @include md {
+    justify-content: space-between;
+
+    a {
+      color: $color-white;
+    }
+  }
+
+  @include sm {
+
+    a {
+      color: $color-white;
+    }
+  }
+
+  &__locations {
+    @include lg {
+      display: none;
+    }
+
+    &-link {
+      font-style: normal;
+    }
+  }
+}

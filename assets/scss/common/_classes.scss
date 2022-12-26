@@ -48,6 +48,7 @@ $size: 16px;
   @include sm-min {
     padding: 32px 0 50px;
   }
+
   @include sm {
     padding: 43px 0 118px;
   }
@@ -60,6 +61,7 @@ $size: 16px;
     @include lg-min {
       justify-content: space-between;
     }
+
     @include lg {
       align-items: center;
       flex-direction: column;
@@ -80,6 +82,7 @@ $size: 16px;
       @include sm-min {
         top: -34px;
       }
+
       @include sm {
         top: -21px;
       }
@@ -110,9 +113,11 @@ $size: 16px;
     @include lg-min {
       gap: $gap-xl;
     }
+
     @include lg-sm {
       gap: $gap;
     }
+
     @include sm {
       flex-direction: column;
 
@@ -144,6 +149,7 @@ $size: 16px;
     align-items: center;
 
     gap: $gap;
+
     @include sm {
       flex-direction: column;
     }
