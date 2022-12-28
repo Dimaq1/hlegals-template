@@ -2,9 +2,51 @@
 @use "../../../mixins" as *;
 
 .logo {
+  display: flex;
+  align-items: flex-start;
+
+  @include sm-min {
+    gap: 5px;
+  }
+
   &__image {
+    @include lg-sm {
+      width: 120px;
+    }
+
     @include sm {
       width: 77px;
+    }
+  }
+
+  &__breadcrumbs {
+    display: flex;
+
+    @include lg-sm {
+      max-height: 40px;
+    }
+
+    @include sm {
+      max-height: 24px;
+    }
+  }
+
+  &__text {
+    color: $color-main;
+
+    font-weight: 400;
+    line-height: 1.18;
+
+    @include lg-min {
+      font-size: 38px;
+    }
+
+    @include lg-sm {
+      font-size: 28px;
+    }
+
+    @include sm {
+      font-size: 19px;
     }
   }
 }
