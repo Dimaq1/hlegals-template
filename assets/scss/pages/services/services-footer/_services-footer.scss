@@ -1,0 +1,12 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services-footer {
+
+  &__content {
+
+    &::before {
+      display: none;
+    }
+  }
+}
