@@ -1,0 +1,23 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.squad-item {
+
+  &__notes {}
+
+  &__description {}
+
+  &__title {}
+
+  &__text {}
+
+  &__symbol {}
+
+  &__link {}
+
+  &__image-arrow {}
+
+  &__picture {}
+
+  &__image {}
+}

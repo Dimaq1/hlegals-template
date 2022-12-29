@@ -1,10 +1,22 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.about-menu {
+.menu-light {
   &__btn {
     &-row {
       background: $color-main;
+    }
+  }
+
+  &__list {
+
+    @include lg-min {
+      gap: $gap-md;
+    }
+
+
+    @include lg-md {
+      gap: 13px;
     }
   }
 
