@@ -3,5 +3,49 @@
 
 .squad {
 
-  &__title {}
+  @include lg-min {
+    padding: 82px 0 60px;
+  }
+
+  @include lg-md {
+    padding: 60px 0 60px;
+  }
+
+  @include md-sm {
+    padding: 40px 0 40px;
+  }
+
+  @include sm {
+    padding: 28px 0 40px;
+  }
+
+  &__title {
+    line-height: 1.19;
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 864px;
+    margin: 0 auto;
+
+    @include lg-min {
+      font-size: 42px;
+      margin-bottom: 80px;
+    }
+
+    @include lg-md {
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    @include md-sm {
+      font-size: 36px;
+      margin-bottom: $gap-xl;
+    }
+
+    @include sm {
+      font-size: 32px;
+      margin-bottom: $gap;
+    }
+  }
 }

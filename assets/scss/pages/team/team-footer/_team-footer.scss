@@ -1,0 +1,12 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.team-footer {
+
+  &__content {
+
+    &::before {
+      display: none;
+    }
+  }
+}

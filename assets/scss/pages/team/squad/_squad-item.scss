@@ -1,23 +1,97 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+.squad-items {
+  display: grid;
+
+  @include lg-min {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-xl;
+  }
+
+  @include lg-sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-xl $gap;
+    justify-items: center;
+  }
+
+  @include sm {
+    grid-template-columns: 1fr;
+    gap: $gap;
+  }
+}
+
 .squad-item {
+  display: flex;
+  gap: $gap;
+  max-width: 413px;
 
-  &__notes {}
+  @include sm-min {
+    flex-direction: column;
+  }
 
-  &__description {}
+  @include sm {
 
-  &__title {}
+    &:nth-of-type(4) {
+      order: 3;
+    }
 
-  &__text {}
+    &:nth-of-type(5) {
+      order: 2;
+    }
+  }
 
-  &__symbol {}
+  &__notes {
+    display: flex;
 
-  &__link {}
+    @include sm-min {
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  &__image-arrow {}
+    @include sm {
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
 
-  &__picture {}
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $color-main;
 
-  &__image {}
+    @include sm {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-grey-text;
+
+    @include sm {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__picture {
+    order: -1;
+
+    @include sm-min {
+      width: 100%;
+    }
+
+    @include sm {
+      max-width: 158px;
+    }
+  }
+
+  &__image {
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+  }
 }

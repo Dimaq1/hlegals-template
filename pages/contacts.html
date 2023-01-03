@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../assets/img/favicon.svg">
+</head>
+
+<body>
+
+  <header class="header-light">
+
+    <div class="header-light__grid container">
+      <div class="header-light__logo logo">
+        <a href="../index.html">
+          <img class="logo__image" src="../assets/img/LogoMinDark.svg" alt="logo">
+        </a>
+        <span class="logo__breadcrumbs">
+          <img class="logo__separator" src="../assets/img/Slash.svg" alt="slash">
+          <span class="logo__text">контакти</span>
+          <img class="logo__separator-symbol" src="../assets/img/SymbolSlash.svg" alt="symbol">
+        </span>
+      </div>
+
+      <nav class="header-light__menu menu">
+        <div class="menu-light__btn menu__btn">
+          <span class="menu-light__btn-row menu__btn-row"></span>
+          <span class="menu-light__btn-row menu__btn-row"></span>
+          <span class="menu-light__btn-row menu__btn-row"></span>
+          <span class="menu-light__btn-row menu__btn-row"></span>
+        </div>
+
+        <ol class="menu-light__list menu__list">
+          <li class="menu-light__item menu__item">
+            <a class="menu-light__link menu__link" href="">про нас</a>
+          </li>
+          <li class="menu-light__item menu__item">
+            <a class="menu-light__link menu__link" href="services.html">послуги</a>
+          </li>
+          <li class="menu-light__item menu__item">
+            <a class="menu-light__link menu__link" href="team.html">команда</a>
+          </li>
+          <li class="menu-light__item menu__item">
+            <a class="menu-light__link menu__link" href="">публікації</a>
+          </li>
+          <li class="menu-light__item menu__item">
+            <a class="menu-light__link menu__link -active" href="contacts.html">контакти</a>
+          </li>
+        </ol>
+      </nav>
+
+      <nav class="header-light__actions actions-light actions">
+        <div class="actions__languages">
+          <a class="actions__languages-link -active" href="">УК</a>
+          <a class="actions__languages-link" href="">РУ</a>
+          <a class="actions__languages-link" href="">EN</a>
+        </div>
+
+        <address class="actions__locations actions-light__locations">
+          <a class="actions__locations-link" href="">Одеса, Адміральський пр., 3</a>
+        </address>
+
+        <div class="actions__phones actions-light__phones">
+          <a class="actions__phones-link" href="tel:+380503901591">+38 (050) 390 15 91</a>
+        </div>
+
+        <div class="actions-light__socials actions__socials">
+          <a class="actions__socials-link" href="">
+            <img class="actions__socials-image" src="../assets/img/FacebookGrey.svg" alt="facebook">
+          </a>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="communications">
+      <div class="container">
+        <div class="communications__content">
+
+          <div class="communications-contacts">
+            <address class="communications-contacts__locations">
+              <a class="communications-contacts__locations-address" href="">Одеса, Адміральський пр., 3</a>
+            </address>
+          </div>
+
+          <div class="communications-contacts__feedback">
+            <div class="communications-contacts__phones">
+              <a class="communications-contacts__phones-link" href="tel:+380503901591"> +38 (050) 390 15 91</a>
+            </div>
+            <div class="communications-contacts__email">
+              <a class="communications-contacts__email-link" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+            </div>
+            <div class="communications-contacts__socials">
+              <a class="communications-contacts__socials-link" href="">
+                <img class="communications-contacts__socials-image" src="../assets/img/FacebookFooter.svg"
+                  alt="facebook">
+              </a>
+              <a href="">Наша сторінка в фейсбуці</a>
+            </div>
+          </div>
+
+
+          <div class="communications-form">
+            <h2 class="communications-form__title">Ми хотіли б Вам допомогти</h2>
+
+            <form class="communications-form__user" method="get" action="">
+              <input class="communications-form__user-name" type="text" name="name" id="name" placeholder="Iм’я">
+              <textarea class="communications-form__user-message" name="message" id="message" cols="30" rows="10"
+                placeholder="Повідомлення"></textarea>
+            </form>
+
+            <h3 class="communications-form__title">Як вам відповісти?</h3>
+
+            <form class="communications-form__feedback" method="post" action="">
+              <input class="communications-form__feedback-phone" type="tel" name="phone" id="phone"
+                placeholder="Номер телефона">
+              <input class="communications-form__feedback-email" type="email" name="email" id="email"
+                placeholder="Чи email">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

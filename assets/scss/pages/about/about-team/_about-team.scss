@@ -16,15 +16,19 @@
     @include md-min {
       width: 100%;
     }
+
     @include md {
       width: 953px;
     }
   }
 
   &__image {
+    display: block;
+
     @include md-min {
       width: 100%;
     }
+
     @include md {
       width: 953px;
     }
@@ -49,6 +53,7 @@
 
       font-size: 96px;
     }
+
     @include xl-lg {
       margin-right: -51px;
 
@@ -56,6 +61,7 @@
 
       font-size: 84px;
     }
+
     @include lg-md {
       margin-right: -37px;
 
@@ -63,6 +69,7 @@
 
       font-size: 70px;
     }
+
     @include md-sm {
       margin-right: -30px;
 
@@ -70,6 +77,7 @@
 
       font-size: 50px;
     }
+
     @include sm {
       margin-right: -20px;
 
