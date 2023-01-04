@@ -20,6 +20,7 @@
       @include abs-position(77%);
     }
   }
+
   @include sm {
     padding: $gap 0;
   }
@@ -53,7 +54,7 @@
 
     background: linear-gradient($color-gradient-redtext);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     line-height: 1.19;
 
@@ -62,19 +63,23 @@
 
       font-size: 42px;
     }
+
     @include md {
       margin-bottom: $gap;
 
       font-size: 32px;
     }
+
     @include sm-xx {
       margin: 0 auto 20px auto;
 
       font-size: 32px;
     }
+
     @include xx {
       font-size: 32px;
     }
+
     -webkit-text-fill-color: transparent;
   }
 
@@ -83,10 +88,12 @@
       column-count: 3;
       column-gap: $gap-xl;
     }
+
     @include md-sm {
       column-count: 2;
       column-gap: $gap-md;
     }
+
     @include sm {
       display: flex;
       align-items: center;
@@ -97,18 +104,7 @@
   }
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: $color-white;
-    border-radius: 12px;
-    background: $color-active-regular;
-    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.21;
+    @extend %button-lg;
 
     @include sm-min {
       position: absolute;
@@ -121,6 +117,7 @@
 
       transform: translateX(-50%);
     }
+
     @include sm {
       max-width: 250px;
       min-height: 50px;

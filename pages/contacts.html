@@ -36,7 +36,7 @@
 
         <ol class="menu-light__list menu__list">
           <li class="menu-light__item menu__item">
-            <a class="menu-light__link menu__link" href="">про нас</a>
+            <a class="menu-light__link menu__link" href="about.html">про нас</a>
           </li>
           <li class="menu-light__item menu__item">
             <a class="menu-light__link menu__link" href="services.html">послуги</a>
@@ -81,34 +81,37 @@
   <main>
 
     <section class="communications">
-      <div class="container">
+      <div class="container container--sm">
         <div class="communications__content">
 
           <div class="communications-contacts">
             <address class="communications-contacts__locations">
-              <a class="communications-contacts__locations-address" href="">Одеса, Адміральський пр., 3</a>
+              <a class="communications-contacts__locations-address" href="">Одеса, <span class="block">Адміральський
+                  пр., 3</span></a>
             </address>
-          </div>
 
-          <div class="communications-contacts__feedback">
-            <div class="communications-contacts__phones">
-              <a class="communications-contacts__phones-link" href="tel:+380503901591"> +38 (050) 390 15 91</a>
-            </div>
-            <div class="communications-contacts__email">
-              <a class="communications-contacts__email-link" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
-            </div>
-            <div class="communications-contacts__socials">
-              <a class="communications-contacts__socials-link" href="">
-                <img class="communications-contacts__socials-image" src="../assets/img/FacebookFooter.svg"
-                  alt="facebook">
-              </a>
-              <a href="">Наша сторінка в фейсбуці</a>
+            <div class="communications-contacts__feedback">
+              <div class="communications-contacts__feedback-phones">
+                <a class="communications-contacts__feedback-link" href="tel:+380503901591"> +38 (050) 390 15 91</a>
+              </div>
+              <div class="communications-contacts__email">
+                <a class="communications-contacts__email-link" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+              </div>
+              <div class="communications-contacts__socials">
+                <a class="communications-contacts__socials-link" href="">
+                  <img class="communications-contacts__socials-image" src="../assets/img/FacebookFooter.svg"
+                    alt="facebook">
+                </a>
+                <a class="communications-contacts__socials-text" href="">Наша сторінка <span class="block">в
+                    фейсбуці</span></a>
+              </div>
             </div>
           </div>
 
 
           <div class="communications-form">
-            <h2 class="communications-form__title">Ми хотіли б Вам допомогти</h2>
+            <h2 class="communications-form__title">Ми хотіли б Вам допомогти УБРАТЬ ЛИНИЮ ФУТЕР + ЭТОТ ТЕКСТ +
+              ОТЗЫВЧИВОСТЬ</h2>
 
             <form class="communications-form__user" method="get" action="">
               <input class="communications-form__user-name" type="text" name="name" id="name" placeholder="Iм’я">
@@ -116,7 +119,7 @@
                 placeholder="Повідомлення"></textarea>
             </form>
 
-            <h3 class="communications-form__title">Як вам відповісти?</h3>
+            <h3 class="communications-form__title-feedback">Як вам відповісти?</h3>
 
             <form class="communications-form__feedback" method="post" action="">
               <input class="communications-form__feedback-phone" type="tel" name="phone" id="phone"
@@ -125,13 +128,58 @@
                 placeholder="Чи email">
             </form>
 
+            <div class="communications-form__actions">
+              <button class="communications-form__actions-button" type="submit">Надіслати запит</button>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
+    <section class="location">
+      <iframe class="location__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.638281334497!2d30.73755517680593!3d46.43604866807289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63396894457b7%3A0x7f6c5236cbcb70c8!2z0JDQtNC80LjRgNCw0LvRjNGB0LrQuNC5INC_0YDQvtGB0L8uLCAzLCDQntC00LXRgdGB0LAsINCe0LTQtdGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDY1MDAw!5e0!3m2!1sru!2sua!4v1672846238497!5m2!1sru!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
   </main>
+
+  <footer class="communications-footer footer">
+
+    <div class="container">
+      <div class="communications-footer__content footer__content">
+
+        <div class="communications-footer__contacts contacts">
+
+          <address class="contacts__locations">
+            <a class="contacts__locations-address" href="">Одеса, Адміральський пр., 3</a>
+            <a class="contacts__locations-map" href="">Подивитися на мапі</a>
+          </address>
+
+          <div class="contacts__feedback">
+            <div class="contacts__socials">
+              <a class="contacts__socials-link" href="">
+                <img class="contacts__socials-image" src="../assets/img/FacebookFooter.svg" alt="facebook">
+              </a>
+            </div>
+            <div class="contacts__phones">
+              <a class="contacts__phones-link" href="tel:+380503901591"> +38 (050) 390 15 91</a>
+            </div>
+            <div class="contacts__email">
+              <a class="contacts__email-link" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="communications-footer__notes footer__notes">© 2021 ТОВ Юридична компанія «HLEGALS»</div>
+
+      </div>
+    </div>
+
+  </footer>
+
 
 </body>
 

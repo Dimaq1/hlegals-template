@@ -1,0 +1,82 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.communications-contacts {
+  width: 414px;
+  max-width: 100%;
+
+  &__locations {
+    margin-bottom: 60px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $color-grey-separator;
+      left: 0;
+      top: 76px;
+    }
+
+    &-address {
+      font-style: normal;
+      font-size: 21px;
+      line-height: 1.43;
+      color: $color-main;
+    }
+  }
+
+  &__feedback {
+
+    &-phones {
+      margin-bottom: $gap;
+    }
+
+    &-link {
+      font-size: 21px;
+      line-height: 1.43;
+      color: $color-main-alt;
+    }
+  }
+
+  &__email {
+    margin-bottom: 60px;
+
+    &-link {
+      font-size: 21px;
+      line-height: 1.43;
+      color: $color-active-regular;
+    }
+  }
+
+  &__socials {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $color-grey-separator;
+      left: 0;
+      bottom: 64px;
+    }
+
+    &-link {}
+
+    &-image {}
+
+    &-text {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active-regular;
+    }
+  }
+}

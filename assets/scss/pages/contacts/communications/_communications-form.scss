@@ -1,0 +1,75 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.communications-form {
+  background: $color-grey-bg;
+  border-radius: 12px;
+  padding: $gap;
+  width: 527px;
+  max-width: 100%;
+
+  &__title {
+    font-size: 32px;
+    line-height: 1.18;
+    background: linear-gradient($color-gradient-redtext);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: $gap;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      @extend %placeholder-form;
+      @extend %entry-field;
+      margin-bottom: $gap;
+    }
+
+    &-message {
+      @extend %placeholder-form;
+      @extend %entry-field;
+      margin-bottom: $gap;
+    }
+  }
+
+  &__title-feedback {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-grey-text;
+    margin-bottom: $gap-sm;
+  }
+
+  &__feedback {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gap-sm;
+
+    &-phone {
+      @extend %placeholder-form;
+      @extend %entry-field;
+      margin-bottom: $gap;
+    }
+
+    &-email {
+      @extend %placeholder-form;
+      @extend %entry-field;
+      margin-bottom: $gap-sm;
+    }
+  }
+
+  &__actions {
+
+    &-button {
+      @extend %button-lg;
+      min-width: 250px;
+      min-height: 50px;
+      border: none;
+      margin: auto;
+    }
+  }
+}

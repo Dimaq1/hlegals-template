@@ -17,3 +17,33 @@
   background-repeat: no-repeat;
   background-position: 5px 1px;
 }
+
+%placeholder-form {
+  &::placeholder {
+    font-size: 18px;
+    line-height: 1.44;
+    color: $color-grey-text;
+  }
+}
+
+%button-lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-white;
+  border-radius: 12px;
+  background: $color-active-regular;
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.21;
+}
+
+%entry-field {
+  background: $color-white;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
