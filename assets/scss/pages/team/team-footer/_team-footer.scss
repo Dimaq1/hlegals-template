@@ -2,11 +2,5 @@
 @use "../../../mixins" as *;
 
 .team-footer {
-
-  &__content {
-
-    &::before {
-      display: none;
-    }
-  }
+  @include hidden-before;
 }

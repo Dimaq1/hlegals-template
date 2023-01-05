@@ -2,21 +2,20 @@
 @use "../../../mixins" as *;
 
 .services-header {
-  background: $color-main;
   padding-bottom: 72px;
+
+  background: $color-main;
 
   &__grid {
     display: grid;
 
     grid-template-columns: auto 1fr;
-
     @include md-min {
       padding-top: 50px;
 
       gap: $gap-sm $gap;
       grid-template-areas: "logo actions" "logo menu";
     }
-
     @include md {
       align-items: center;
 

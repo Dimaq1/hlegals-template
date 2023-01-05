@@ -2,10 +2,19 @@
 @use "../../../mixins" as *;
 
 .communications {
-
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 80px 0;
+
+    @include lg-min {
+      padding: 80px 0;
+    }
+    @include lg {
+      flex-direction: column;
+
+      padding: $gap 0 $gap-xl;
+
+      gap: $gap-xl;
+    }
   }
 }

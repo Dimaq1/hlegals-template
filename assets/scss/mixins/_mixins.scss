@@ -57,3 +57,11 @@
   bottom: $bottom;
   left: $left;
 }
+
+@mixin hidden-before {
+  &__content {
+    &::before {
+      display: none;
+    }
+  }
+}

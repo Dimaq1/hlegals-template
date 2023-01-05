@@ -6,37 +6,46 @@
   max-width: 100%;
 
   &__locations {
-    margin-bottom: 60px;
     position: relative;
 
+    margin-bottom: 60px;
+
     &::after {
-      content: "";
       position: absolute;
-      height: 4px;
-      width: 100%;
-      background: $color-grey-separator;
-      left: 0;
       top: 76px;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      content: "";
+
+      background: $color-grey-separator;
+
+      @include xl-lg {
+        width: 90%;
+      }
     }
 
     &-address {
-      font-style: normal;
-      font-size: 21px;
-      line-height: 1.43;
       color: $color-main;
+
+      font-size: 21px;
+      font-style: normal;
+      line-height: 1.43;
     }
   }
 
   &__feedback {
-
     &-phones {
       margin-bottom: $gap;
     }
 
     &-link {
+      color: $color-main-alt;
+
       font-size: 21px;
       line-height: 1.43;
-      color: $color-main-alt;
     }
   }
 
@@ -44,39 +53,47 @@
     margin-bottom: 60px;
 
     &-link {
+      color: $color-active-regular;
+
       font-size: 21px;
       line-height: 1.43;
-      color: $color-active-regular;
     }
   }
 
   &__socials {
     position: relative;
+
     display: flex;
     align-items: center;
+
     gap: $gap-sm;
 
     &::before {
-      content: "";
       position: absolute;
-      height: 4px;
-      width: 100%;
-      background: $color-grey-separator;
-      left: 0;
       bottom: 64px;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      content: "";
+
+      background: $color-grey-separator;
+
+      @include xl-lg {
+        width: 90%;
+      }
     }
 
-    &-link {}
-
-    &-image {}
-
     &-text {
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 1.33;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       color: $color-active-regular;
+
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.33;
     }
   }
 }

@@ -5,33 +5,30 @@
   display: grid;
 
   @include lg-min {
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap-xl;
+    grid-template-columns: repeat(3, 1fr);
   }
-
   @include lg-sm {
-    grid-template-columns: repeat(2, 1fr);
     gap: $gap-xl $gap;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
-
   @include sm {
-    grid-template-columns: 1fr;
     gap: $gap;
+    grid-template-columns: 1fr;
   }
 }
 
 .squad-item {
   display: flex;
-  gap: $gap;
+
   max-width: 413px;
 
+  gap: $gap;
   @include sm-min {
     flex-direction: column;
   }
-
   @include sm {
-
     &:nth-of-type(4) {
       order: 3;
     }
@@ -45,22 +42,22 @@
     display: flex;
 
     @include sm-min {
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
-
     @include sm {
+      align-items: flex-start;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: flex-start;
     }
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.16;
     color: $color-main;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.16;
 
     @include sm {
       margin-bottom: 5px;
@@ -68,9 +65,10 @@
   }
 
   &__text {
+    color: $color-grey-text;
+
     font-size: 16px;
     line-height: 1.38;
-    color: $color-grey-text;
 
     @include sm {
       margin-bottom: 10px;
@@ -83,7 +81,6 @@
     @include sm-min {
       width: 100%;
     }
-
     @include sm {
       max-width: 158px;
     }
@@ -91,7 +88,9 @@
 
   &__image {
     display: block;
-    border-radius: 12px;
+
     width: 100%;
+
+    border-radius: 12px;
   }
 }

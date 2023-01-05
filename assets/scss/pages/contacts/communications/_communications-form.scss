@@ -2,20 +2,33 @@
 @use "../../../mixins" as *;
 
 .communications-form {
-  background: $color-grey-bg;
-  border-radius: 12px;
-  padding: $gap;
   width: 527px;
   max-width: 100%;
+  padding: $gap;
+
+  border-radius: 12px;
+  background: $color-grey-bg;
+
+  @include lg {
+    margin: auto;
+  }
 
   &__title {
-    font-size: 32px;
-    line-height: 1.18;
+    margin-bottom: $gap;
+
     background: linear-gradient($color-gradient-redtext);
     -webkit-background-clip: text;
+            background-clip: text;
+
+    line-height: 1.18;
+
+    @include sm-min {
+      font-size: 32px;
+    }
+    @include sm {
+      font-size: 22px;
+    }
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: $gap;
   }
 
   &__user {
@@ -23,53 +36,62 @@
     flex-direction: column;
 
     &-name {
+      margin-bottom: $gap;
+
       @extend %placeholder-form;
       @extend %entry-field;
-      margin-bottom: $gap;
     }
 
     &-message {
+      margin-bottom: $gap;
+
       @extend %placeholder-form;
       @extend %entry-field;
-      margin-bottom: $gap;
     }
   }
 
   &__title-feedback {
-    font-size: 14px;
-    line-height: 1.21;
+    margin-bottom: $gap-sm;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-grey-text;
-    margin-bottom: $gap-sm;
+
+    font-size: 14px;
+    line-height: 1.21;
   }
 
   &__feedback {
     display: flex;
     flex-direction: column;
+
     margin-bottom: $gap-sm;
 
     &-phone {
+      margin-bottom: $gap;
+
       @extend %placeholder-form;
       @extend %entry-field;
-      margin-bottom: $gap;
     }
 
     &-email {
+      margin-bottom: $gap-sm;
+
       @extend %placeholder-form;
       @extend %entry-field;
-      margin-bottom: $gap-sm;
     }
   }
 
   &__actions {
-
     &-button {
-      @extend %button-lg;
       min-width: 250px;
       min-height: 50px;
-      border: none;
       margin: auto;
+
+      border: none;
+
+      @extend %button-lg;
     }
   }
 }

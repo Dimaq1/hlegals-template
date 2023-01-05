@@ -9,12 +9,9 @@
   }
 
   &__list {
-
     @include lg-min {
       gap: $gap-md;
     }
-
-
     @include lg-md {
       gap: 11px;
     }

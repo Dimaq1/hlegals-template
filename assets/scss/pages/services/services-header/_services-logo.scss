@@ -2,9 +2,7 @@
 @use "../../../mixins" as *;
 
 .logo {
-
   &__text {
-
     &.-white {
       color: $color-white;
     }

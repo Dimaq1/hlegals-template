@@ -2,16 +2,13 @@
 @use "../../../mixins" as *;
 
 .services-menu {
-
   &__list {
-
     @include lg {
       gap: 14px;
     }
   }
 
   &__link {
-
     &.-active {
       padding: 0.25em 0 0;
 

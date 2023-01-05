@@ -2,7 +2,6 @@
 @use "../../../mixins" as *;
 
 .services-actions {
-
   @include md-min {
     justify-content: flex-end;
 
@@ -10,7 +9,6 @@
       color: $color-white;
     }
   }
-
   @include md {
     justify-content: space-between;
 
@@ -18,9 +16,7 @@
       color: $color-white;
     }
   }
-
   @include sm {
-
     a {
       color: $color-white;
     }
