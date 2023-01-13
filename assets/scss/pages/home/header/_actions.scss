@@ -6,6 +6,7 @@
   align-items: center;
 
   gap: $gap;
+
   @include sm-min {
     justify-content: flex-end;
 
@@ -13,6 +14,7 @@
       color: $color-white;
     }
   }
+
   @include sm {
     justify-content: space-between;
 
@@ -35,6 +37,11 @@
       padding: 5px 6px;
 
       border-radius: 8px;
+      transition: 0.4s;
+
+      &:hover {
+        background: $color-grey-bg-alt;
+      }
 
       &.-active {
         color: $color-white;
@@ -62,6 +69,20 @@
   &__socials {
     @include lg {
       display: none;
+    }
+
+    &-image {
+
+      fill: $color-grey-text;
+      transition: 0.4s;
+
+      &:hover {
+        fill: $color-active-hover;
+      }
+    }
+
+    &-path {
+      fill: inherit;
     }
   }
 }

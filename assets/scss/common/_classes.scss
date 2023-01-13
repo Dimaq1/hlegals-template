@@ -42,12 +42,20 @@ $size: 16px;
   display: block;
 }
 
+.languages-link__dark {
+
+  &:hover {
+    color: $color-main;
+  }
+}
+
 .footer {
   background: $color-grey-bg;
 
   @include sm-min {
     padding: 32px 0 40px;
   }
+
   @include sm {
     padding: 43px 0 118px;
   }
@@ -60,6 +68,7 @@ $size: 16px;
     @include lg-min {
       justify-content: space-between;
     }
+
     @include lg {
       align-items: center;
       flex-direction: column;
@@ -80,6 +89,7 @@ $size: 16px;
       @include sm-min {
         top: -34px;
       }
+
       @include sm {
         top: -21px;
       }
@@ -110,9 +120,11 @@ $size: 16px;
     @include lg-min {
       gap: $gap-xl;
     }
+
     @include lg-sm {
       gap: $gap;
     }
+
     @include sm {
       flex-direction: column;
 
@@ -144,8 +156,25 @@ $size: 16px;
     align-items: center;
 
     gap: $gap;
+
     @include sm {
       flex-direction: column;
+    }
+  }
+
+  &__socials {
+
+    &-image {
+      fill: $color-active-regular;
+      transition: 0.4s;
+
+      &:hover {
+        fill: $color-accent;
+      }
+    }
+
+    &-path {
+      fill: inherit;
     }
   }
 
@@ -173,12 +202,14 @@ $size: 16px;
     display: grid;
 
     grid-template-columns: auto 1fr;
+
     @include md-min {
       padding-top: 50px;
 
       gap: $gap-sm $gap;
       grid-template-areas: "logo actions" "logo menu";
     }
+
     @include md {
       align-items: center;
 
@@ -210,6 +241,7 @@ $size: 16px;
       color: $color-grey-text;
     }
   }
+
   @include md {
     justify-content: space-between;
 

@@ -11,13 +11,13 @@
 
     cursor: pointer;
     -webkit-transition: 0.5s ease-in-out;
-       -moz-transition: 0.5s ease-in-out;
-         -o-transition: 0.5s ease-in-out;
-            transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     -webkit-transform: rotate(0deg);
-       -moz-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
 
     @include md-min {
       display: none;
@@ -33,13 +33,13 @@
       height: 2px;
 
       -webkit-transition: 0.25s ease-in-out;
-         -moz-transition: 0.25s ease-in-out;
-           -o-transition: 0.25s ease-in-out;
-              transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
       -webkit-transform: rotate(0deg);
-         -moz-transform: rotate(0deg);
-           -o-transform: rotate(0deg);
-              transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
 
       opacity: 1;
       border-radius: 3px;
@@ -72,16 +72,16 @@
 
       &:nth-child(2) {
         -webkit-transform: rotate(45deg);
-           -moz-transform: rotate(45deg);
-             -o-transform: rotate(45deg);
-                transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
       }
 
       &:nth-child(3) {
         -webkit-transform: rotate(-45deg);
-           -moz-transform: rotate(-45deg);
-             -o-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
       }
 
       &:nth-child(4) {
@@ -99,6 +99,7 @@
 
     gap: $gap-md;
     @include unlist;
+
     @include md {
       position: absolute;
       right: 0;
@@ -121,5 +122,11 @@
     color: $color-white;
 
     font-size: 18px;
+
+    transition: 0.4s;
+
+    &:hover {
+      color: $color-accent;
+    }
   }
 }
