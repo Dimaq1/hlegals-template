@@ -61,3 +61,12 @@
   border-radius: 8px;
   background: $color-white;
 }
+
+%wrapper-cases {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color-grey-bg-alt;
+  }
+}
