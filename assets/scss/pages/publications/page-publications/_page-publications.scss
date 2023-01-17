@@ -1,0 +1,25 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-publications {
+
+  &__switcher {
+    background: $color-grey-separator;
+    max-width: 260px;
+    display: flex;
+
+    &-button {
+      font-size: 18px;
+      line-height: 1.16;
+      text-align: center;
+      color: $color-main;
+      border: none;
+      padding: $gap-sm 0;
+      background: transparent;
+    }
+  }
+
+  &__cards {
+    display: grid;
+  }
+}
