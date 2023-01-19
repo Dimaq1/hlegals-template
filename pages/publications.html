@@ -85,17 +85,18 @@
 
   <main class="publications-main">
 
-    <section class="publications page-publications">
+    <section class="page-publications">
       <div class="container">
 
         <h2 class="publications__title visually-hidden">Нам є що розповісти</h2>
 
         <div class="page-publications__switcher">
-          <button class="page-publications__switcher-button -active">новини</button>
-          <button class="page-publications__switcher-button">компанія</button>
+          <span class="page-publications__switcher-active"></span>
+          <button class="page-publications__switcher-button left active-case">новини</button>
+          <button class="page-publications__switcher-button right">компанія</button>
         </div>
 
-        <div class="publications__cards page-publications__cards">
+        <div class="page-publications__cards">
 
           <article class="publications-item">
             <div class="publications-item__content">
@@ -185,8 +186,8 @@
 
         </div>
 
-        <div class="publications__action">
-          <a class="publications__button" href="">Ще публікації</a>
+        <div class="page-publications__action">
+          <a class="page-publications__button" href="">Ще публікації</a>
         </div>
 
       </div>
@@ -194,6 +195,8 @@
 
   </main>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

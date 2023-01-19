@@ -2,24 +2,98 @@
 @use "../../../mixins" as *;
 
 .page-publications {
+  background: $color-grey-bg;
+  padding: 40px 0 60px;
 
   &__switcher {
-    background: $color-grey-separator;
     max-width: 260px;
+    height: 40px;
+    text-align: center;
+    will-change: transform;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 12px;
+    background: $color-grey-separator;
+    padding: 2px;
     display: flex;
+    gap: 2px;
+    margin: 0 auto $gap-xl;
 
     &-button {
+      display: inline-block;
+      background: none;
+      width: 127px;
+      height: 100%;
+      position: relative;
+      transition: .3s ease all;
+      padding-bottom: 1px;
+      font-weight: 500;
       font-size: 18px;
       line-height: 1.16;
       text-align: center;
       color: $color-main;
       border: none;
-      padding: $gap-sm 0;
-      background: transparent;
+      border-radius: 12px;
+
+      &:hover {
+        background: $color-grey-bg;
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-active {
+      color: #151515;
+      background-color: white;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      width: 127px;
+      height: 36px;
+      z-index: -1;
+      transition: .3s ease-out all;
+      border-radius: 12px;
+
+      &:hover {
+        background-color: $color-grey-bg;
+      }
     }
   }
 
   &__cards {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: $gap-lg;
+    column-gap: $gap-md;
+    margin-bottom: $gap-lg;
+  }
+
+  &__item {
+    min-width: 414px;
+    height: 460px;
+  }
+
+  &__button {
+    @extend %button-lg;
+    position: relative;
+    margin: auto;
+
+    @include sm-min {
+      max-width: 250px;
+      min-height: 50px;
+      z-index: 1;
+    }
+
+    @include sm {
+      max-width: 250px;
+      min-height: 50px;
+      margin: auto;
+      margin-top: $gap-xl;
+    }
   }
 }
