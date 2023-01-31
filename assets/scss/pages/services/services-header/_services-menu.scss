@@ -12,8 +12,15 @@
     &.-active {
       padding: 0.25em 0 0;
 
-      color: $color-white;
       border-bottom: 2px solid $color-white;
+
+      @include md-min {
+        color: $color-white;
+      }
+
+      @include md {
+        color: $color-accent;
+      }
     }
   }
 }

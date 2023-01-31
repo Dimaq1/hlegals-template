@@ -21,6 +21,7 @@
       content: "";
 
       background: $color-grey-separator;
+      z-index: -1;
 
       @include xl-lg {
         width: 90%;
@@ -67,6 +68,7 @@
     align-items: center;
 
     gap: $gap-sm;
+    z-index: -1;
 
     &::before {
       position: absolute;
@@ -79,6 +81,7 @@
       content: "";
 
       background: $color-grey-separator;
+      z-index: -1;
 
       @include xl-lg {
         width: 90%;

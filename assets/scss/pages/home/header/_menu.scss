@@ -2,93 +2,78 @@
 @use "../../../mixins" as *;
 
 .menu {
-  &__btn {
-    position: relative;
+  position: relative;
 
-    width: 18px;
-    height: 22.5px;
-    margin-left: auto;
+  &.active {
+    display: flex;
+    justify-content: flex-end;
 
-    cursor: pointer;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-
-    @include md-min {
-      display: none;
+    &::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 0 0;
+      background: $color-main;
+      opacity: 0.7;
     }
+  }
 
-    &-row {
+  &-btn {
+    background-color: $color-grey-bg-alt;
+
+    @include md {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3px;
       position: absolute;
-      left: 0;
+      right: 0;
 
-      display: block;
-
-      width: 100%;
-      height: 2px;
-
-      -webkit-transition: 0.25s ease-in-out;
-      -moz-transition: 0.25s ease-in-out;
-      -o-transition: 0.25s ease-in-out;
-      transition: 0.25s ease-in-out;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-
-      opacity: 1;
-      border-radius: 3px;
-      background: $color-white;
-
-      &:nth-child(1) {
-        top: 0;
-      }
-
-      &:nth-child(2) {
-        top: 6px;
-      }
-
-      &:nth-child(3) {
-        top: 6px;
-      }
-
-      &:nth-child(4) {
-        top: 12px;
+      span {
+        width: 20px;
+        height: 3px;
+        display: block;
+        background-color: $color-main;
+        transition: 0.3s;
       }
     }
 
-    &.-active span {
-      &:nth-child(1) {
-        top: 9px;
-        left: 50%;
+    @include sm-min {
+      top: -5px;
+    }
 
-        width: 0;
+    @include sm {
+      top: -15px;
+    }
+
+    &.active {
+      position: fixed;
+      right: 20px;
+
+      @include md-sm {
+        top: 86px;
       }
 
-      &:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
+      @include sm {
+        top: 64px;
       }
 
-      &:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+      span:nth-child(1) {
+        display: none;
       }
 
-      &:nth-child(4) {
-        top: 9px;
-        left: 50%;
+      span:nth-child(2) {
+        transform: translateY(3px) rotate(45deg);
+        background-color: #EC6F5D;
+      }
 
-        width: 0;
+      span:nth-child(3) {
+        transform: translateY(-3px) rotate(-45deg);
+        background-color: #EC6F5D;
       }
     }
   }
@@ -96,37 +81,90 @@
   &__list {
     display: flex;
     justify-content: flex-end;
+    animation-name: down-up;
+    animation-duration: 0.7S;
 
     gap: $gap-md;
     @include unlist;
 
     @include md {
-      position: absolute;
-      right: 0;
+
+      background: $color-white;
+      border-radius: 12px 12px 0px 0px;
 
       display: none;
 
       padding: $gap-lg;
 
-      border-radius: 5px;
-      background: $color-main;
-      box-shadow: 10px 10px 20px $color-black;
+      @keyframes down-up {
+        0% {
+          position: fixed;
+          right: 0;
+          left: 0;
+          bottom: -100%;
+        }
+
+        10% {
+          position: fixed;
+          right: 0;
+          left: 0;
+          bottom: -50%;
+        }
+
+        100% {
+          position: fixed;
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      &.active {
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+      }
+
     }
   }
 
+
   &__link {
     display: block;
-
-    padding: 0.25em 0;
-
     color: $color-white;
-
-    font-size: 18px;
 
     transition: 0.4s;
 
     &:hover {
       color: $color-accent;
+    }
+
+    @include md-min {
+      padding: 0.25em 0;
+
+      font-size: 18px;
+    }
+
+    @include md {
+      background: $color-grey-bg;
+      border-radius: 12px;
+      width: 335px;
+      height: 44px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 11px;
+      color: $color-active-regular;
     }
   }
 }

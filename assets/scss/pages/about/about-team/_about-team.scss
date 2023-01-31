@@ -16,8 +16,10 @@
     @include md-min {
       width: 100%;
     }
+
     @include md {
       width: 953px;
+      z-index: -2;
     }
   }
 
@@ -27,6 +29,7 @@
     @include md-min {
       width: 100%;
     }
+
     @include md {
       width: 953px;
     }
@@ -51,6 +54,7 @@
 
       font-size: 96px;
     }
+
     @include xl-lg {
       margin-right: -51px;
 
@@ -58,6 +62,7 @@
 
       font-size: 84px;
     }
+
     @include lg-md {
       margin-right: -37px;
 
@@ -65,19 +70,23 @@
 
       font-size: 70px;
     }
+
     @include md-sm {
       margin-right: -30px;
 
       letter-spacing: 30px;
 
       font-size: 50px;
+      z-index: -1;
     }
+
     @include sm {
       margin-right: -20px;
 
       letter-spacing: 20px;
 
       font-size: 36px;
+      z-index: -1;
     }
   }
 }

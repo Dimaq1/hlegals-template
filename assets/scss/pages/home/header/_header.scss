@@ -15,6 +15,7 @@
     background-size: 86.4vh;
 
     @include abs-position;
+
     @include md {
       display: none;
     }
@@ -38,12 +39,14 @@
     display: grid;
 
     grid-template-columns: auto 1fr;
+
     @include sm-min {
       padding-top: 50px;
 
       gap: $gap-sm $gap;
       grid-template-areas: "logo actions" "logo menu";
     }
+
     @include sm {
       align-items: center;
 
@@ -113,5 +116,9 @@
 
     cursor: pointer;
     transform: translateX(-50%);
+
+    &-image {
+      display: block;
+    }
   }
 }

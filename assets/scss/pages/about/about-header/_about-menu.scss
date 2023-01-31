@@ -3,8 +3,25 @@
 
 .menu-light {
   &__btn {
-    &-row {
-      background: $color-main;
+    @include sm-min {
+      top: -25px;
+    }
+
+    @include sm {
+      top: -20px;
+    }
+
+    &.active {
+      position: fixed;
+      right: 20px;
+
+      @include md-sm {
+        top: 65px;
+      }
+
+      @include sm {
+        top: 61px;
+      }
     }
   }
 
@@ -12,6 +29,7 @@
     @include lg-min {
       gap: $gap-md;
     }
+
     @include lg-md {
       gap: 11px;
     }
@@ -21,10 +39,12 @@
     color: $color-active-regular;
 
     &.-active {
-      padding: 0.25em 0 0;
+      @include md-min {
+        padding: 0.25em 0 0;
+        border-bottom: 2px solid $color-accent;
+      }
 
       color: $color-accent;
-      border-bottom: 2px solid $color-accent;
     }
   }
 }

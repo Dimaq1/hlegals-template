@@ -6,11 +6,13 @@
 
   border-radius: 0 0 12px 12px;
   background: linear-gradient($color-gradient-supersoft);
+  z-index: -1;
 
   @include md-min {
     margin-bottom: 60px;
     padding-bottom: 80px;
   }
+
   @include md {
     margin-bottom: 40px;
     padding-bottom: 20px;
@@ -68,7 +70,7 @@
 
     background: linear-gradient($color-gradient-redtext);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     line-height: 1.19;
 
@@ -77,16 +79,19 @@
 
       font-size: 42px;
     }
+
     @include lg-md {
       margin-bottom: 50px;
 
       font-size: 38px;
     }
+
     @include md {
       margin-bottom: $gap;
 
       font-size: 32px;
     }
+
     -webkit-text-fill-color: transparent;
   }
 
@@ -94,15 +99,19 @@
     display: grid;
 
     gap: 58px 48px;
+
     @include xl-min {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include xl-md {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include md-min {
       gap: 58px 48px;
     }
+
     @include md {
       gap: 40px 48px;
       grid-template-columns: 1fr;
@@ -114,6 +123,7 @@
       display: flex;
       flex-direction: column;
     }
+
     @include md {
       display: grid;
       align-items: center;
@@ -130,11 +140,13 @@
       line-height: 1.16;
 
       grid-area: ttl;
+
       @include md-min {
         margin-bottom: $gap-md;
 
         font-size: 24px;
       }
+
       @include md {
         font-size: 18px;
       }
@@ -155,11 +167,13 @@
       order: -1;
 
       grid-area: icn;
+
       @include md-min {
         max-width: 92px;
         max-height: 92px;
         margin-bottom: $gap;
       }
+
       @include md {
         max-width: 64px;
       }

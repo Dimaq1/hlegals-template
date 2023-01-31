@@ -27,11 +27,10 @@
       </div>
 
       <nav class="header-light__menu menu">
-        <div class="menu-light__btn menu__btn">
-          <span class="menu-light__btn-row menu__btn-row"></span>
-          <span class="menu-light__btn-row menu__btn-row"></span>
-          <span class="menu-light__btn-row menu__btn-row"></span>
-          <span class="menu-light__btn-row menu__btn-row"></span>
+        <div class="menu-btn menu-light__btn">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
         <ol class="menu-light__list menu__list">
@@ -91,9 +90,8 @@
         <h2 class="publications__title visually-hidden">Нам є що розповісти</h2>
 
         <div class="page-publications__switcher">
-          <span class="page-publications__switcher-active"></span>
-          <button class="page-publications__switcher-button left active-case">новини</button>
-          <button class="page-publications__switcher-button right">компанія</button>
+          <button class="page-publications__switcher-button switcher-button-first active">новини</button>
+          <button class="page-publications__switcher-button switcher-button-second">компанія</button>
         </div>
 
         <div class="page-publications__cards">
@@ -195,7 +193,45 @@
 
   </main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <footer class="publications-footer footer">
+
+    <div class="container">
+      <div class="publications-footer__content footer__content">
+
+        <div class="publications-footer__contacts contacts">
+
+          <address class="contacts__locations">
+            <a class="contacts__locations-address" href="">Одеса, Адміральський пр., 3</a>
+            <a class="contacts__locations-map" href="">Подивитися на мапі</a>
+          </address>
+
+          <div class="contacts__feedback">
+            <div class="contacts__socials">
+              <a class="contacts__socials-link" href="">
+                <svg class="contacts__socials-image" width="38" height="38" viewBox="0 0 38 38" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="contacts__socials-path"
+                    d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" />
+                </svg>
+              </a>
+            </div>
+            <div class="contacts__phones">
+              <a class="contacts__phones-link" href="tel:+380503901591"> +38 (050) 390 15 91</a>
+            </div>
+            <div class="contacts__email">
+              <a class="contacts__email-link" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publications-footer__notes footer__notes">© 2021 ТОВ Юридична компанія «HLEGALS»</div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="../assets/js/switcher.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 
