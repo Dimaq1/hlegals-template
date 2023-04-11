@@ -1,5 +1,5 @@
-let switcherButtonFirst = document.querySelector('.switcher-button-first');
-let switcherButtonSecond = document.querySelector('.switcher-button-second');
+const switcherButtonFirst = document.querySelector('.switcher-button-first');
+const switcherButtonSecond = document.querySelector('.switcher-button-second');
 
 switcherButtonFirst.addEventListener('click', function () {
   switcherButtonFirst.classList.add('active');

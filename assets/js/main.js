@@ -1,12 +1,42 @@
-let menuButton = document.querySelector('.menu-btn');
-let menuList = document.querySelector('.menu__list');
-let mobileMenuBackground = document.querySelector('.menu');
+import { menuEvent } from "./moduls/menu.js";
+import { toggleActiveClassWithInterval } from "./moduls/funcToggleInterval.js";
 
-menuButton.addEventListener('click', function () {
-  menuButton.classList.toggle('active');
-  menuList.classList.toggle('active');
-  mobileMenuBackground.classList.toggle('active');
+const slider = document.querySelector('.slider');
+const btnClickScroll = document.querySelector('.page-header__button');
+
+btnClickScroll.addEventListener('click', () => {
+  slider.scrollIntoView({ block: 'start', behavior: 'smooth' });
 });
+
+menuEvent()
+toggleActiveClassWithInterval('.slider__header', 4000);
+toggleActiveClassWithInterval('.slider__note', 4000);
+toggleActiveClassWithInterval('.slider__indicator', 4000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

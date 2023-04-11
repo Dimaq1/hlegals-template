@@ -175,6 +175,11 @@ $size: 16px;
   }
 
   &__indicators {
+    position: absolute;
+    bottom: -280px;
+    left: 50%;
+    transform: translateX(-50%);
+
     @include md-min {
       display: none;
     }
