@@ -1,5 +1,5 @@
 # Hlegals Template
-### Multi-page, adaptive website created using technologies such as:
+Multi-page, adaptive website created using technologies such as:
 - HTML
 - CSS(SCSS)
 - JavaScript
